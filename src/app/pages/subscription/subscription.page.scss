@@ -1,0 +1,66 @@
+/* iOS places the subtitle above the title */
+
+
+ion-card-header.ios {
+    display: flex;
+    flex-flow: column-reverse;
+  }
+  ion-card.subscriptionCard{
+    margin:7px 0px;
+    padding:0px 0px;  
+    border-radius: 21px;
+  }
+  ion-card {
+    --background: #ffffff;
+    box-shadow: none;
+    padding: 5px;
+    border-radius: 15px;
+    margin: 0;
+    width: 100%;
+  }
+  ion-card-content{
+    padding:0px;
+  }
+  ion-item {
+    --padding-start: 15px;
+    font-size: 13px;
+    --padding-end: 0px;
+    margin-bottom: 0px;
+    --background: transparent;
+  }
+  ion-label{
+    display:block;
+  }
+  p{
+    font-size:13px;
+  }
+  ion-label P{
+    padding:0px !important;
+  }
+  
+  .gold{
+    background: rgba(160, 143, 47, 0.582);
+  }
+  .silver{
+    background: silver;
+  }
+  
+  .subscriptionCard p{
+    padding:7px 10px;
+    color: black;
+  }
+
+  ion-toolbar {
+    --background: #ffffff;
+    --color: #19422d;  
+    --min-height: 80px;
+    --padding-top: 20px;
+    --padding-bottom: 20px;
+  }
+
+  ion-content{
+    --background: #f6f6f6;
+  }
+  ion-list{
+    background: none;
+  }

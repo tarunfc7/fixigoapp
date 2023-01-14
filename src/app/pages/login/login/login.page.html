@@ -1,0 +1,21 @@
+<ion-content fullscreen  scroll-y="false" class="ion-padding">
+  <form (submit)="login(form)" #form="ngForm" class="ion-padding ion-text-center">
+
+    <img src="../../../assets/images/login/mobile_register.png" class="ion-text-center" />
+    <ion-label class="placeholder ion-text-start">Enter Your Mobile Number</ion-label>
+    <p class="ion-text-start">We'll send you a 4 dights OTP on your mobile 
+      number for verification</p>
+
+    <ion-input #mobile class="ion-padding eid ion-text-center" [class.active]="validMobile" name="mobile"
+      [(ngModel)]="formData.mobile" required type="number" inputmode="numeric"
+      pattern="[0-9]*" placeholder="Enter your mobile number" [clearInput]=false>
+    </ion-input>
+
+    <ion-button type="submit" fill="solid"  color="primary" class="ion-float-right" >Get OTP</ion-button>
+
+    <!-- <ion-note color="danger" *ngIf="form.submitted && (form?.control.controls.eid.invalid)">
+      {{'login.eid_check' | translate}}
+    </ion-note>-->
+
+  </form>
+</ion-content>

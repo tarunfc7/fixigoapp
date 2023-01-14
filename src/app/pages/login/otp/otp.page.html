@@ -1,0 +1,51 @@
+<ion-content fullscreen  scroll-y="false" class="ion-padding">
+  <form (submit)="submit(form)" #form="ngForm" class="ion-padding ion-text-center">
+
+    <img src="../../../assets/images/login/password.png" class="ion-text-center" />
+    <ion-label class="placeholder ion-text-start">OTP Verification</ion-label>
+    <p class="ion-text-start">Enter the OTP sent to your mobile number</p>
+    <div class="d-flex ion-justify-content-between">
+      <p class="ion-text-start">+91-9123456789</p>
+      <ion-button fill="clear"  color="secondary" class="ion-no-padding" (click)="change()">Change</ion-button>
+    </div>
+
+    <ion-grid class="ion-no-padding ion-padding-bottom">
+      <ion-row class="ion-no-padding">
+        <ion-col class="ion-no-padding">
+          <div class="pin ion-text-start">
+            <ion-input class="bigPin" #pin (ionChange)="blur(pin,form)" name="pin" min="4" max="4" minlength="4"
+              maxlength="4" type="tel" pattern="[0-9٠-٩]*" inputmode="number" [(ngModel)]="formData.pin" required
+              (ionFocus)="formData.pin = null">
+              <div class="pinBox">
+                <div class="pin1"></div>
+                <div class="pin2"></div>
+                <div class="pin3"></div>
+                <div class="pin4"></div>
+              </div>
+            </ion-input>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row *ngIf="form.submitted && (form.invalid || formData.pin_error)" class="ion-padding-vertical ion-text-start">
+        <ion-col>
+          <ion-note color="danger">
+            Please enter valid otp 
+          </ion-note>
+        </ion-col>
+      </ion-row>
+
+
+    </ion-grid>
+    <div class="d-flex ion-justify-content-between">
+      <ion-button fill="clear"  color="secondary" class="ion-no-padding" >Resend OTP</ion-button>
+      <ion-button type="submit" fill="solid"  color="primary" class="w50">Verify</ion-button>
+    </div>
+   
+
+    <!-- <ion-note color="danger" *ngIf="form.submitted && (form?.control.controls.eid.invalid)">
+      {{'login.eid_check' | translate}}
+    </ion-note>-->
+
+  </form>
+</ion-content>
