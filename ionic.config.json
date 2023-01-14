@@ -1,0 +1,7 @@
+{
+  "name": "Fixigotest",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
