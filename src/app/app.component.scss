@@ -1,0 +1,33 @@
+/* Set variables for all modes */
+:root {
+    /* Set the background of the entire app */
+    --ion-background-color: #ff3700;
+  
+    /* Set the font family of the entire app */
+    --ion-font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Roboto', sans-serif;
+  }
+  
+  /* Set text color of the entire app for iOS only */
+  .ios {
+    --ion-text-color: #000;
+  }
+  
+  /* Set text color of the entire app for Material Design only */
+  .md {
+    --ion-text-color: #222;
+  }
+
+  ion-toolbar {
+    --background: #19422d;
+    --color: white;
+  
+    // --border-color: #f24aec;
+    // --border-width: 4px 0;
+    // --border-style: double;
+  
+    --min-height: 80px;
+    --padding-top: 20px;
+    --padding-bottom: 20px;
+  }
+
+  

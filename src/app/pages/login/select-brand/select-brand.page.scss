@@ -1,0 +1,24 @@
+ion-thumbnail {
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+  }
+  ion-col {
+    border: 0.55px solid #efefef;
+    padding: 15px;
+  }
+  ion-label {
+    font-size: 13px;
+    display: block;
+  }
+
+  ion-toolbar{
+    --background: white;
+    // --min-height: 80px;
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+  --border-width: 0;
+  }
+  ion-searchbar{    
+    border:0px;
+  }

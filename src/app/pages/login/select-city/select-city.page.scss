@@ -1,0 +1,28 @@
+ion-thumbnail {
+    display: inline-block;
+    width:60px;
+    height:60px;
+  }
+//   ion-col {
+//     border: 0.55px solid #efefef;
+//     padding: 15px;
+//   }
+  ion-label {
+    font-size: 13px;
+    display: block;
+    font-family: 'SF UI DISPLAY Light';
+    letter-spacing: 0.6px;
+  }
+  .cityList{
+    border: 1px solid #D8D8D8;
+    padding: 15px 10px;
+    border-radius: 8px;
+  }
+  h2{
+    font-family: 'SF UI DISPLAY semibold';   
+    margin-top: 35px;
+    display: flex; 
+    img{
+        margin-left:5px;
+    }
+  }

@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>My Account</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card class="moreCard">
+    <ion-card-content>
+      <ion-item detail="true" lines="none">
+        <ion-thumbnail slot="start">
+          <img
+            alt="Silhouette of mountains"
+            src="../../assets/icon/account_pic.png"
+          />
+        </ion-thumbnail>
+        <ion-label>          
+          <h3>Abishek Sharma</h3>
+          <p>+91 981234567</p>         
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-list class="moreList">
+    <ion-item detail="true" lines="none" *ngFor="let result of results">
+      <ion-label>{{ result }} </ion-label>
+    </ion-item>
+    
+  </ion-list>
+  <ion-label class="ion-text-center" (click)="logout()">
+  <p class="ion-text-center">Logout</p>
+  <small>V 1.0</small>
+  </ion-label>
+
+</ion-content>

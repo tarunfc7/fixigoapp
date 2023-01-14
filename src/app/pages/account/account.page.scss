@@ -1,0 +1,61 @@
+/* iOS places the subtitle above the title */
+ion-toolbar {
+    --background: #ffffff;
+    --color: #19422d;  
+    --min-height: 80px;
+    --padding-top: 20px;
+    --padding-bottom: 20px;
+  }
+
+  ion-content{
+    --background: #f6f6f6;
+  }
+  ion-list{
+    background: none;
+  }
+ion-card-header.ios {
+    display: flex;
+    flex-flow: column-reverse;
+  }
+  
+  ion-list.moreList {
+    background-color: #ffffff;
+    margin: 16px;
+    border-radius: 8px;
+    ion-item {
+        --background: transparent;
+        border-bottom: 1px solid #eeeeee;
+        padding: 10px 0;
+        border-radius: 8px;
+        
+    }
+    // ion-label{            
+    //     font-weight:bold;
+    //     }
+  }
+  .moreList ion-item {
+    margin: 5px 0px;
+  }
+  ion-card.moreCard {
+    --background: #ffffff;
+    box-shadow: none;
+    ion-item {
+        --background: transparent;
+        --padding-start:0px;
+    }
+    h3{
+        font-size:16px;
+        font-weight:600;
+        margin-bottom:5px;
+    }
+  }
+  
+  ion-label {
+    display: block;
+  }
+  p {
+    font-size: 14px;
+  }
+  small {
+    color: gray;
+  }

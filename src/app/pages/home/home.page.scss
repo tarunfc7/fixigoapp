@@ -1,0 +1,185 @@
+/* iOS places the subtitle above the title */
+//   body {
+//     margin-top: constant(safe-area-inset-top);
+//     margin-top: env(safe-area-inset-top);
+//   }
+ion-toolbar {
+    --background: #ffffff;
+    --color: #19422d;  
+    --min-height: 80px;
+    --padding-top: 20px;
+    --padding-bottom: 20px;
+  }
+
+  ion-content{
+    --background: #f6f6f6;
+    // margin-top: constant(safe-area-inset-top);
+    // margin-top: env(safe-area-inset-top);
+  }
+  ion-list{
+    background: none;
+  }
+ion-card-header.ios {
+    display: flex;
+    flex-flow: column-reverse;
+  }
+  .my-buffer-progress {
+    --background: #eeeeee;
+    --progress-background: blue;
+    height: 7px;
+    border-radius: 4px;
+    margin-top: 7px;
+  }
+  .my-safety-progress {
+    --background: #eeeeee;
+    --progress-background: green;
+    height: 7px;
+    border-radius: 4px;
+    margin-top: 7px;
+  }
+  .my-comfort-progress {
+    --background: #eeeeee;
+    --progress-background: orange;
+    height: 7px;
+    border-radius: 4px;
+    margin-top: 7px;
+  }
+  ion-label {
+    font-size: 16px;
+  }
+  .no-padding {
+    padding: 0px;
+  }
+  svg {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    transform: rotate(-90deg);
+  }
+  svg circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #f0f0f0;
+    stroke-width: 8;
+    stroke-linecap: round;
+  }
+  svg circle:last-of-type {
+    stroke-dasharray: 625px;
+    stroke-dashoffset: calc(625px - (625px * var(--percent)) / 100);
+    stroke: #3498db;
+  }
+  svg circle:last-of-type {
+    stroke: #2ecc71;
+  }
+  .number {
+    position: absolute;
+    top: 48%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+  }
+  .number h3 {
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 0.4px;
+  }
+  .number h3 span {
+    font-size: 11px;
+  }
+  .percent {
+    position: relative;
+  }
+  /* .d-flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } */
+  ion-card {
+    --background: #ffffff;
+    border: 1px solid #eeeeee;
+    box-shadow: none;
+    padding: 0;
+    border-radius: 24px;
+  }
+  ion-card.vehicleCard{
+    margin-top:60px;
+    ion-label {
+        display: block;
+        padding: 3px;
+        color:#969696;
+        letter-spacing: .6px;
+      }
+      ion-text{
+        font-size: 18px;
+        font-weight:bold;
+      }
+  }
+  ion-card-content {
+    padding: 10px 10px 0px;
+  }
+  ion-item.bookServiceItem {
+    --padding-start: 15px;
+    --background: rgba(255, 255, 0, 0.432);
+    border-radius: 64px;
+    font-size: 13px;
+    --inner-padding-end: 0px;
+    color: red;
+    margin-bottom: 10px;
+    ion-label{
+        letter-spacing: 0px;
+    }
+  }
+  ion-button {
+    margin: 0px;
+    --background: orange;
+  }
+  ion-label {
+    display: block;
+  }
+  img {
+    width: 125px;
+    height: 125px;
+    object-fit: contain;
+  }
+  ion-card.serviceCard,
+  ion-card.trendingCard {
+    padding: 15px;
+    margin: 7px 6px;
+    width: 95%;
+    --background: #ffffff;
+  }
+  ion-slides {
+    width: 100%;
+    padding: 0px;
+    margin: 0;
+  }
+  .serviceCard ion-label {
+    font-weight: bold;
+    padding: 5px 0;
+  }
+  .serviceCard ion-text {
+    font-weight: 300;
+  }
+  ion-label.txtsmall {
+    font-weight: 300;
+    padding: 0px 0px 5px;
+    font-size: 11px;
+    color: gray;
+  }
+  .trendingCard ion-text {
+    font-size: 9px;
+    color: orange;
+  }
+  
+  ion-card.reviewCard {
+    padding: 10px;
+    margin: 5px;
+    width: 100%;
+    --background: white;
+  }
+  p {
+    font-size: 13px;
+  }
+  ion-chip{
+    --background: transparent;
+  }
