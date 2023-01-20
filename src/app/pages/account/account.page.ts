@@ -13,7 +13,14 @@ export class AccountPage implements OnInit {
   ngOnInit() {
   }
 
-  public data = ['Notifications', 'Manage your vehicle', 'My Address', 'My Repair Quote', 'Wallet', 'Refer and earn', 'Contact Us', 'FAQ'];
+  public data = [{title:'Notifications',page:'notifications'}, 
+  {title:'Manage your vehicle',page:'tabs'},
+   {title:'My Address',page:'address'}, 
+   {title:'My Repair Quote',page:'repair-quote'},
+   {title:'Wallet', page:'wallet'},
+   {title:'Refer and earn', page:'refer-earn'},
+   {title:'Contact Us', page:'contact'},
+   {title:'FAQ',page:'faq'},];
   public results = [...this.data];
 
   // handleChange(event) {
@@ -23,6 +30,11 @@ export class AccountPage implements OnInit {
 
   logout(){
     this.navCtrl.navigateRoot('/login');
+  }
+
+  page(result:any){
+    console.log("result",result);
+    this.navCtrl.navigateRoot('/'+result);
   }
 
 }

@@ -1,0 +1,93 @@
+ion-toolbar{
+    --background: white;
+    // --min-height: 80px;
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+  --border-width: 0;
+  }
+
+  ion-item.themeItem{
+    --background: #F5F9FD;
+    --border-radius:10px;
+    --min-height: 50px;
+    --padding-start: 10px;
+    --border: 1px solid #E7E7E8;
+  }
+  ion-item.themeItem ion-label{
+    margin-top:15px;
+  }
+  ion-item.themeItem ion-label ion-icon{
+    font-size:21px;
+  }
+  
+  ion-grid.serviceFieldGrid p{
+    font-size:13px;
+    color: #959697;
+    margin-bottom:5px;
+    text-transform: capitalize;
+    font-family: 'SF UI DISPLAY Light';
+    letter-spacing: .6px;
+  }
+  
+  ion-checkbox {
+    --size: 16px;
+    --background-checked: #6815ec;
+  }
+  .d-flex{
+    display: flex;
+  }
+  ion-item.checkItem{
+    --min-height:30px;
+    ion-label{
+        color: #323232;
+        font-size:13px;
+        font-family: 'SF UI DISPLAY Semibold';
+        margin:0px;
+    }
+  }
+  ion-grid.amtGrid{
+    color: #767B80;
+    font-size:13px;
+    margin:15px 15px 0;  
+    ion-col{
+        font-family: 'SF UI DISPLAY Light';
+        margin-bottom: 7px;
+    }
+  }
+  .totalAmt{
+    color: #00A61C;  
+    border-bottom: 0.55px solid #efefef;
+    border-top: 0.55px solid #efefef;
+    padding-top:15px;
+    padding-bottom:15px;
+    font-size:14px;
+  }
+  
+  h6{
+    color: #231F20;
+    font-family: 'SF UI DISPLAY Semibold';
+  }
+
+  ion-input{
+    font-size: 13px;
+    --padding-end: 0px;
+  }
+  .ml-5{
+    margin-top: 7px;
+    margin-inline-start: 5px;
+  }
+
+  ion-item.walletItem{
+    --padding-start:20px;
+    --border-width: 0.55px 0px 0.55px 0px;
+    h3{
+        color: #231F20;
+        font-family: 'SF UI DISPLAY Semibold';
+        font-size: 16px;
+    }
+    ion-text{
+        font-size:13px;
+        color: #00A61C;
+        font-family: 'SF UI DISPLAY Light';
+    }
+  }

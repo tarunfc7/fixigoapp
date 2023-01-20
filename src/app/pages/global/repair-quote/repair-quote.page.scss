@@ -1,0 +1,117 @@
+
+ion-toolbar {
+    --background: #ffffff;
+    --color: #19422d;
+  
+    /* --border-color: #f24aec; */
+    --border-width: 0px 0 0.55px 0;
+    /* --border-style: double; */
+  
+    /* --min-height: 80px; */
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+  }
+  
+  ion-content{
+    --background: #f6f6f6;
+  }
+  .d-flex{
+    display:flex;
+  }
+  .bdrBtm{
+    border-bottom: 0.55px solid #eee;
+  }
+  
+  ion-list{
+    background:transparent;
+  }
+  
+  ion-card-header.ios {
+    display: flex;
+    flex-flow: column-reverse;
+  }
+  ion-card.subscriptionCard{    
+    border-radius: 15px;
+    border:0px;
+    --background: transparent;
+    padding: 5px 0px;
+    margin: 0px;
+    ion-thumbnail{
+        width:75px;
+    }
+  }
+  ion-card {
+    --background: #ffffff;
+    box-shadow: none;
+    border-radius: 15px;
+    margin: 10px 0;
+    width: 100%;
+  }
+  ion-card-content{
+    padding:0px;
+    border-radius: 16px;
+  }
+  ion-item {
+    --padding-start: 15px;
+    font-size: 13px;
+    --padding-end: 0px;
+    margin-bottom: 0px;
+    --background: transparent;
+  }
+  ion-label{
+    display:block;
+  }
+  .gold{
+    background: #FF8409;
+    color: white;
+  }
+  .silver{
+    background: silver;
+  }
+  .green{
+    background: #1FA831;
+    color: white;
+  }
+  
+  .subscriptionCard p.servicefootItem{
+    padding:0px 15px 7px;
+    font-size:13px;
+  }
+  ion-label P{
+    padding:0px !important;
+    font-size:11px;
+    color: #231F20;
+    font-family: 'SF UI DISPLAY Light';
+    margin-bottom: 5px;
+    letter-spacing: 0.6px;
+  }
+  .subscriptionCard span.quantityItem{
+    color: #2E2E2E;
+    font-size:12px;
+    font-family: 'SF UI DISPLAY Semibold';
+  }
+  .quantityBox{
+    margin-top: 0px;
+    margin-bottom: 5px;
+  }
+  .quantityBox h5{
+    color: black;
+    font-size:12px;
+  }
+  .quantityBox p{
+    color: black;
+    font-size:12px;
+  }
+  .quantityBox ion-note{
+    font-size:12px;
+    margin-top: 5px;
+  }
+  .quantityBox ion-text{
+    font-size:12px;
+    margin-top: 5px;
+  }
+
+  .subscriptionCard small{
+    color: #A5A7A6;
+    letter-spacing: 0.6px;
+  }

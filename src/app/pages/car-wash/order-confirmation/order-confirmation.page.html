@@ -1,0 +1,111 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="ondemand"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Order Confirmation</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid class="ion-no-padding ion-padding-vertical bdrBtm">
+    <ion-row class="ion-no-padding">
+      <ion-col class="ion-no-padding">
+        <ion-item lines="none" class="ion-align-items-start">
+          <ion-thumbnail slot="start">
+            <img  alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+          </ion-thumbnail>
+          <ion-label class="ion-no-margin">
+            <h4>Heading</h4>       
+            <p>Paragraph</p>
+          </ion-label>     
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="ion-no-padding ion-padding-top confirmlocationGrid bdrBtm">
+    <ion-row class="ion-no-padding ion-margin-horizontal">
+      <ion-col class="ion-no-padding">
+        <h6 class="ion-no-margin">Services</h6>
+        <ion-item lines="full">
+         <ion-icon slot="start" name="location" size="small"></ion-icon>
+          <ion-label class="ion-no-margin">
+            Heading
+          </ion-label>     
+        </ion-item>
+        <ion-item lines="none">
+          <ion-icon slot="start" name="calendar-outline" size="small"></ion-icon>
+          <ion-label class="ion-no-margin">
+            Heading
+          </ion-label>     
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="ion-no-padding ion-padding-top confirmServiceGrid bdrBtm">
+    <ion-row class="ion-no-padding ion-margin-horizontal">
+      <ion-col class="ion-no-padding">
+        <h6 class="ion-no-margin">Services</h6>
+        <ion-item lines="full">
+        <ion-icon slot="start" name="ellipse" size="small"></ion-icon>
+          <ion-label class="ion-no-margin d-flex ion-justify-content-between">
+            <span>Heading</span>
+            <span>123</span>
+          </ion-label>     
+        </ion-item>
+        <ion-item lines="none">
+          <ion-icon slot="start" name="ellipse" size="small"></ion-icon>
+          <ion-label class="ion-no-margin d-flex ion-justify-content-between">
+            <span>Heading</span>
+            <span>123</span>
+          </ion-label>       
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <h6 class="ion-no-margin ion-margin-top ion-margin-horizontal">offers</h6>
+  <ion-item lines="full" detail="true">     
+    <ion-label>
+    <h3>Button Item</h3>          
+    </ion-label>
+    <ion-icon name="ribbon"  slot="start" color="success"></ion-icon>
+  </ion-item>  
+
+  <h6 class="ion-no-margin ion-margin-top ion-margin-horizontal">Amt</h6>
+  <ion-grid class="amtGrid">
+    <ion-row>
+      <ion-col size="10" class="ion-text-end ion-no-padding">Amt</ion-col>
+      <ion-col size="1" class="ion-text-center ion-no-padding">:</ion-col>
+      <ion-col size="1" class="ion-text-end ion-no-padding">123</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="10" class="ion-text-end ion-no-padding">Amt</ion-col>
+      <ion-col size="1" class="ion-text-center ion-no-padding">:</ion-col>
+      <ion-col size="1" class="ion-text-end ion-no-padding">123</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="10" class="ion-text-end ion-no-padding">Amt</ion-col>
+      <ion-col size="1" class="ion-text-center ion-no-padding">:</ion-col>
+      <ion-col size="1" class="ion-text-end ion-no-padding">123</ion-col>
+    </ion-row>   
+  </ion-grid>
+  <ion-row class="ion-margin-horizontal totalAmt">
+    <ion-col size="10" class="ion-text-end ion-no-padding">Total</ion-col>
+    <ion-col size="1" class="ion-text-center ion-no-padding">:</ion-col>
+    <ion-col size="1" class="ion-text-end ion-no-padding">123</ion-col>
+  </ion-row>
+
+  <ion-row class="ion-margin">
+    <ion-col size="6">
+      <ion-button fill="solid" color="dark"  expand="block">Pay with cash</ion-button>
+    </ion-col>
+    <ion-col size="6">
+    <ion-button fill="solid" color="danger" expand="block">Pay Now</ion-button>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

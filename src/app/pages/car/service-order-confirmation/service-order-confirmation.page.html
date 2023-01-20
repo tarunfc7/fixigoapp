@@ -1,0 +1,131 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="car-services"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Alto 800</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h6 class="ion-padding-horizontal">Services</h6>
+  <ion-list lines="full">
+    <ion-item class="ion-margin-start" *ngFor="let result of serviceListResults">
+      <ion-thumbnail slot="start">
+        <img alt="{{ result.title }}" [src]="result.imagePath" />
+      </ion-thumbnail>
+      <ion-label>
+        <h3>{{ result.title }}</h3>
+        <p>{{ result.description }}</p>
+        <p>{{ result.Amount }}</p>
+      </ion-label>
+      <ion-icon name="close-circle" slot="end"></ion-icon>
+    </ion-item>   
+  </ion-list>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-button fill="solid" color="dark" expand="block">Vehicle Pick up</ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button fill="solid" color="light" expand="block">Vehicle Self drop</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="serviceFieldGrid">
+    
+    <ion-row>      
+      <ion-col size="12">
+        <p class="ion-no-margin">Enter pick up location</p>
+        <ion-item lines="none" class="themeItem">
+          <ion-label><ion-icon name="location-sharp"></ion-icon></ion-label>
+          <ion-input placeholder="H Block, Sec-65, Khoda Rd, Noida, 201301"></ion-input>
+        </ion-item>
+      </ion-col>
+     
+      <ion-col size="6">            
+        <ion-item lines="none" class="themeItem">
+          <ion-label><ion-icon name="calendar-outline"></ion-icon></ion-label>
+          <ion-input placeholder="30/08/2022"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="6">            
+        <ion-item lines="none" class="themeItem">
+          <ion-label><ion-icon name="time-outline"></ion-icon></ion-label>
+          <ion-input placeholder="12:00 PM - 12:25 PM"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row class="d-flex ion-align-items-center ion-no-padding">
+      <ion-col size="6" class="ion-no-padding">
+        <p class="ml-5">Drop location</p>
+      </ion-col>
+      <ion-col size="6" class="ion-no-padding">
+        <ion-item lines="none"  class="ion-float-right checkItem">
+          <ion-checkbox></ion-checkbox>
+          <ion-label>Deliver at same location</ion-label>
+        </ion-item>   
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">        
+        <ion-item lines="none" class="themeItem">
+          <ion-label><ion-icon name="location-sharp"></ion-icon></ion-label>
+          <ion-input placeholder="H Block, Sec-65, Khoda Rd, Noida, 201301"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12">
+        <p class="ion-no-margin">Personal note</p>
+        <ion-item lines="none" class="themeItem">        
+          <ion-input placeholder="Enter your note here"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+ 
+  <ion-item lines="full" class="ion-no-margin walletItem">     
+    <ion-label>
+      <h3>Use wallet money</h3>
+      <ion-text color="success">Wallet amount : 549</ion-text>      
+    </ion-label>
+    <ion-icon name="checkbox" slot="start" color="success"></ion-icon>
+  </ion-item>   
+ 
+  <h6 class="ion-no-margin ion-margin-top ion-margin-horizontal">Offers</h6>
+  <ion-item lines="full" class="ion-no-margin" detail="true">     
+    <ion-label>
+    <h3>Fixigo flat 50% off</h3>      
+    </ion-label>
+    <ion-icon name="ribbon"  slot="start" color="success"></ion-icon>
+  </ion-item>  
+
+  <h6 class="ion-no-margin ion-margin-top ion-margin-horizontal">Amount</h6>
+  <ion-grid class="amtGrid">
+    <ion-row>
+      <ion-col size="9" class="ion-text-end ion-no-padding">Sub total</ion-col>
+      <ion-col size="1" class="ion-text-center ion-no-padding">:</ion-col>
+      <ion-col size="2" class="ion-text-end ion-no-padding">4998</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="9" class="ion-text-end ion-no-padding">Wallet amount</ion-col>
+      <ion-col size="1" class="ion-text-center ion-no-padding">:</ion-col>
+      <ion-col size="2" class="ion-text-end ion-no-padding">149</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="9" class="ion-text-end ion-no-padding">Discount</ion-col>
+      <ion-col size="1" class="ion-text-center ion-no-padding">:</ion-col>
+      <ion-col size="2" class="ion-text-end ion-no-padding">60</ion-col>
+    </ion-row>   
+  </ion-grid>
+ <ion-row class="ion-margin-horizontal totalAmt">
+    <ion-col size="9" class="ion-text-end ion-no-padding">Payable amount</ion-col>
+    <ion-col size="1" class="ion-text-center ion-no-padding">:</ion-col>
+    <ion-col size="2" class="ion-text-end ion-no-padding">123</ion-col>
+  </ion-row>
+  <ion-button fill="solid" color="dark" expand="block" class="ion-margin" (click)="payNow()">Pay Now</ion-button>
+
+</ion-content>
+

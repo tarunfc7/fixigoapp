@@ -1,0 +1,75 @@
+
+ion-toolbar {
+    --background: #ffffff;
+    --color: #19422d;
+  
+    /* --border-color: #f24aec; */
+    --border-width: 0px 0 0.55px 0;
+    /* --border-style: double; */
+  
+    /* --min-height: 80px; */
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+  }
+  
+  ion-content{
+    --background: #f6f6f6;
+  }
+  .d-flex{
+    display:flex;
+  }
+  .bdrBtm{
+    border-bottom: 0.55px solid #eee;
+  }
+  
+  ion-card.addressCard{
+    border-radius: 20px;
+    margin-top:15px;
+    margin-bottom: 15px;
+    box-shadow: none;
+    border: 1px solid #D7E0E7;
+    ion-card-subtitle{
+        font-size:14px;
+        color: #2D2D2D;
+    }
+    ion-label{
+        margin:0px;
+        color:#7A8187;
+        font-family: 'SF UI DISPLAY Semibold';
+        font-size: 13px;
+    }
+    ion-card-content ion-item{
+        font-size:14px;
+        --padding-start: 10px;
+        --padding-top: 16px;
+        --padding-bottom: 10px;
+        ion-icon{
+            font-size:18px;
+            margin:0px 5px 0 0px;
+        }
+    }
+  }
+   
+  .actionBtn{
+    padding:10px 15px;
+  }
+  ion-button.btnEdit{
+    --background: #E2EFFF;
+    --color: #1473E6;
+    --padding-top: 2px;
+    --padding-bottom: 2px;
+    height: 2.2em;
+  }
+  
+  ion-button.btnDelete{
+    --background: #ff383816;
+    --color: #FF3838;
+    --padding-top: 2px;
+    --padding-bottom: 2px;
+    height: 2.2em;
+  }
+
+  ion-button.btnWhite{
+    --background: #FFFFFF;
+    --color: #000000;
+  }

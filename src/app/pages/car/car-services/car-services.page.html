@@ -1,0 +1,344 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Alto 800</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <img src="../../../../assets/images/services/Periodic_service_banner.png" alt="Periodic Services" class="bannerImg"/>
+
+  <h6 class="ion-margin">Periodic Services</h6> 
+  <ion-grid class="servicesListGrid">
+    <ion-row>
+      <ion-col>
+        <ion-item lines="none" class="ion-align-items-start" *ngFor="let result of serviceListResults">
+          <ion-thumbnail slot="start">
+            <img alt="{{ result.title }}" [src]="result.imagePath" />
+          </ion-thumbnail>
+          
+          <ion-label>
+            <h4>{{ result.title }}</h4>
+            <p>{{ result.Amount }}</p>
+            <p class="ion-text-wrap">{{ result.description }} </p>
+            <ion-text color="success">{{ result.memberDesc }}</ion-text> 
+              
+          <ion-button fill="solid" color="dark" class="ion-float-end" id="selected-service-modal">
+          Select</ion-button> 
+          </ion-label> 
+        </ion-item>      
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <h6 class="ion-no-margin ion-margin-horizontal">Additional Services</h6> 
+  <ion-grid class="servicesListGrid">
+    <ion-row>
+      <ion-col>
+        <ion-item lines="none" class="ion-align-items-start" *ngFor="let result of additionalserviceListResults">
+          <ion-thumbnail slot="start">
+            <img alt="{{ result.title }}" [src]="result.imagePath" />
+          </ion-thumbnail>
+          
+          <ion-label>
+            <h4>{{ result.title }}</h4>
+            <p>{{ result.Amount }}</p>
+            <p class="ion-text-wrap">{{ result.description }} </p>
+            <ion-text color="success">{{ result.memberDesc }}</ion-text> 
+              
+          <ion-button fill="solid" color="dark" class="ion-float-end" id="selected-service-modal">
+          Select</ion-button> 
+          </ion-label> 
+        </ion-item>     
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <h6 class="ion-no-margin ion-margin-horizontal">FAQ</h6> 
+  <ion-accordion-group class="faqgroup ion-padding-horizontal">
+    <ion-accordion value="first" toggleIcon="add" toggleIconSlot="end">
+      <ion-item slot="header">
+        <ion-label>Frequently asked questions</ion-label>
+      </ion-item>
+      <div class="ion-padding-vertical faqContent" slot="content">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+      </div>
+    </ion-accordion>
+    <ion-accordion value="second" toggleIcon="add" toggleIconSlot="end">
+      <ion-item slot="header">
+        <ion-label>Frequently asked questions</ion-label>
+      </ion-item>
+      <div class="ion-padding-vertical faqContent" slot="content">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+      </div>
+    </ion-accordion>
+
+    <ion-accordion value="third" toggleIcon="add" toggleIconSlot="end">
+      <ion-item slot="header">
+        <ion-label>Frequently asked questions</ion-label>
+      </ion-item>
+      <div class="ion-padding-vertical faqContent" slot="content">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+
+  <h6 class="ion-no-margin ion-margin-horizontal ion-margin-top">Fixigo benefits</h6> 
+  <ion-grid class="imgBenefits ion-no-padding">
+    <ion-row class="ion-text-center ion-no-padding">
+      <ion-col size="6" class="ion-no-padding">
+        <img
+          alt="Fixigo Benefits"
+          src="../../../../assets/images/services/fixigo_benefits.png"
+        />
+      </ion-col>
+      <ion-col size="6" class="ion-no-padding">
+        <ion-list>
+          <ion-item lines="none">Free car inspection</ion-item>
+          <ion-item lines="none">100% Genuine spare parts </ion-item>
+          <ion-item lines="none">Free doorstep pick-up and drop</ion-item>
+          <ion-item lines="none">Mobil engine oil</ion-item>
+          <ion-item lines="none">Trained mechanics</ion-item>
+        </ion-list>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+  <h6 class="ion-no-margin ion-margin-horizontal ion-margin-top">Brands Fixigo uses</h6> 
+  <ion-grid class="imgBrand">
+    <ion-row class="ion-text-center">
+      <ion-col size="4">
+        <img alt="Mobil"
+        src="../../../../assets/images/services/Mobil_logo.svg"          
+        />
+      </ion-col>
+      <ion-col size="4" class="bdrvertical">
+        <img
+        alt="Bosch"
+        src="../../../../assets/images/services/bosch_logo.svg"
+        />
+      </ion-col>
+      <ion-col size="4">
+        <img
+          alt="K&N"
+          src="../../../../assets/images/services/K&N_logo.svg"
+        />
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-modal
+    #itemModal
+    trigger="selected-service-modal"
+    [initialBreakpoint]="0.6"
+    [breakpoints]="[0, 0.25, 0.5, 0.75,]"
+    handleBehavior="cycle"
+  >
+    <ng-template>
+      <ion-content class="ion-padding bgTheme">
+        <div class="ion-margin-top">
+          <div class="d-flex ion-justify-content-between ion-align-items-center">
+            <h6 class="ion-no-margin ion-padding-start ion-padding-bottom">Select Services</h6>          
+          </div>
+         <ion-card class="brandImageCard">
+          <ion-card-content>
+            <ion-button class="backBtn" fill="clear"> 
+             <ion-icon name="chevron-back-outline" size="small"></ion-icon>
+            </ion-button>
+            <ion-button  class="nextBtn"  fill="clear"> 
+            <ion-icon name="chevron-forward-outline" size="small"></ion-icon>             
+            </ion-button>
+            <ion-slides [options]="brandImageslideOpts">
+              <ion-slide>
+                <img
+                  alt="bosch"
+                  src="../../../../assets/images/services/bosch_logo.svg"
+                />
+              </ion-slide>
+              <ion-slide>
+                <img
+                alt="Mobil"
+                src="../../../../assets/images/services/Mobil_logo.svg"
+                />
+              </ion-slide>
+              <ion-slide>
+                  <img
+                  alt="K&N"
+                  src="../../../../assets/images/services/K&N_logo.svg"
+                />
+              </ion-slide>
+              <ion-slide>
+                <img
+                alt="Mobil"
+                src="../../../../assets/images/services/Mobil_logo.svg"
+                />
+              </ion-slide>
+              <ion-slide>
+                <img
+                alt="bosch"
+                src="../../../../assets/images/services/bosch_logo.svg"
+                />
+              </ion-slide>
+              <ion-slide>
+                  <img
+                  alt="K&N"
+                  src="../../../../assets/images/services/K&N_logo.svg"
+                />
+              </ion-slide>
+            </ion-slides>
+          </ion-card-content>
+         </ion-card>
+          
+          <ion-slides [options]="brandServiceslideOpts">
+            <ion-slide>
+              <ion-card class="brandServiceCard">
+                <ion-card-content>
+                  <ion-label>
+                    <h4 class="ion-text-wrap">Mobil Super</h4>
+                    <span>5W-30</span>                
+                    <p class="ion-text-end">3000
+                      <ion-icon name="ellipse-outline"></ion-icon></p>
+                  </ion-label>
+                </ion-card-content>
+              </ion-card>
+            </ion-slide>
+            <ion-slide>
+              <ion-card class="brandServiceCard">
+                <ion-card-content>
+                  <ion-label>
+                    <h4 class="ion-text-wrap">Mobil Super</h4>
+                    <span>5W-20</span>                
+                    <p class="ion-text-end">1500
+                      <ion-icon name="ellipse-outline"></ion-icon></p>
+                  </ion-label>
+                </ion-card-content>
+              </ion-card>
+            </ion-slide>
+            <ion-slide>
+              <ion-card class="brandServiceCard">
+                <ion-card-content>
+                  <ion-label>
+                    <h4 class="ion-text-wrap">Mobil Premium</h4>
+                    <span>5W-40</span>                
+                    <p class="ion-text-end">4500
+                      <ion-icon name="ellipse-outline"></ion-icon></p>
+                  </ion-label>
+                </ion-card-content>
+              </ion-card>
+            </ion-slide>
+            <ion-slide>
+              <ion-card class="brandServiceCard">
+                <ion-card-content>
+                  <ion-label>
+                    <h4 class="ion-text-wrap">Mobil Super</h4>
+                    <span>5W-30</span>                
+                    <p class="ion-text-end">3000
+                      <ion-icon name="ellipse-outline"></ion-icon></p>
+                  </ion-label>
+                </ion-card-content>
+              </ion-card>
+            </ion-slide>
+            <ion-slide>
+              <ion-card class="brandServiceCard">
+                <ion-card-content>
+                  <ion-label>
+                    <h4 class="ion-text-wrap">Mobil Super</h4>
+                    <span>5W-20</span>                
+                    <p class="ion-text-end">1500
+                      <ion-icon name="ellipse-outline"></ion-icon></p>
+                  </ion-label>
+                </ion-card-content>
+              </ion-card>
+            </ion-slide>
+          </ion-slides>  
+
+          <ion-button expand="block" color="dark" (click)="addtoCart()"
+            class="ion-margin"><ion-icon name="add" slot="start" size="small"></ion-icon> Add to cart</ion-button>
+          
+          <!-- <div class="d-flex ion-justify-content-between ion-align-items-center" (click)="itemModal.dismiss()">
+            <h6 class="ion-no-margin ion-padding-start ion-padding-bottom">Recommended Services</h6>          
+          </div> -->
+
+          <ion-grid class="recommendedServiceGrid ion-no-padding">
+            <ion-row>
+              <ion-col size="12">
+                <h5 class="ion-no-margin ion-padding-horizontal ion-padding-bottom">Recommended services</h5>
+                <ion-slides [options]="trendingslideOpts">
+                  <ion-slide>
+                    <ion-card  class="ion-text-center trendingCard">
+                      <ion-card-content>
+                        <img
+                          alt="alternater"
+                          src="../../assets/icon/alternater.svg"
+                        />
+                        <ion-label class="ion-text-start">Clutch Set</ion-label>
+                        <ion-label class="ion-text-start txtsmall">Every 5000KM
+                        </ion-label>
+                        <ion-button fill="solid" color="dark" expand="block"
+                          ><ion-icon name="add" slot="start" size="small"></ion-icon> Add</ion-button>
+                      </ion-card-content>
+                    </ion-card>
+                  </ion-slide>
+                
+                  <ion-slide>
+                    <ion-card  class="ion-text-center trendingCard">
+                      <ion-card-content>
+                        <img
+                          alt="wipers"
+                          src="../../assets/icon/wipers.svg"
+                        />
+                        <ion-label class="ion-text-start">wipers</ion-label>
+                        <ion-label class="ion-text-start txtsmall">Every 6-12 months</ion-label>
+                        <ion-button fill="solid" color="dark" expand="block"
+                          ><ion-icon name="add" slot="start" size="small"></ion-icon> Add</ion-button>
+                      </ion-card-content>
+                    </ion-card>
+                  </ion-slide>
+                
+                  <ion-slide>
+                    <ion-card  class="ion-text-center trendingCard">
+                      <ion-card-content>
+                        <img
+                          alt="Plus1"
+                          src="../../assets/icon/Plus1.svg"
+                        />
+                        <ion-label class="ion-text-start">Plus1</ion-label>
+                        <ion-label class="ion-text-start txtsmall">Every 1000</ion-label>
+                        <ion-button fill="solid" color="dark" expand="block"
+                          ><ion-icon name="add" slot="start" size="small"></ion-icon> Add</ion-button>
+                       
+                      </ion-card-content>
+                    </ion-card>
+                  </ion-slide>
+                
+                  <ion-slide>
+                    <ion-card  class="ion-text-center trendingCard">
+                      <ion-card-content>
+                        <img
+                          alt="pngwing"
+                          src="../../assets/icon/pngwing.com (16).svg"
+                        />
+                        <ion-label class="ion-text-start">pngwing</ion-label>
+                        <ion-label class="ion-text-start txtsmall">Every 1000</ion-label>
+                        <ion-button fill="solid" color="dark" expand="block"
+                          ><ion-icon name="add" slot="start" size="small"></ion-icon> Add</ion-button>
+                      </ion-card-content>
+                    </ion-card>
+                  </ion-slide>
+                </ion-slides>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+         
+        </div>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+</ion-content>

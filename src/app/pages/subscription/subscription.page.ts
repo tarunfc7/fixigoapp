@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-subscription',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SubscriptionPage implements OnInit {
 
-  constructor() { }
+  constructor(private navCtrl: NavController) { }
 
   ngOnInit() {
+  }
+
+  ondemandpackage(){
+    this.navCtrl.navigateRoot('/ondemand-package-details');
+  }
+
+  subscription(){
+    this.navCtrl.navigateRoot('/subscription-list');
   }
 
 }

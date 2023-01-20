@@ -1,0 +1,59 @@
+ion-toolbar {
+    --background: #ffffff;
+    --color: #19422d;
+  
+    /* --border-color: #f24aec; */
+    --border-width: 0px 0 0.55px 0;
+    /* --border-style: double; */
+  
+    /* --min-height: 80px; */
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+  }
+  
+  ion-content{
+    --background: #f6f6f6;
+  }
+  .d-flex{
+    display:flex;
+  }
+  .bdrBtm{
+    border-bottom: 0.55px solid #eee;
+  }
+  
+  .txtSmall{
+    font-size:11px;
+    color: #a6a6a6;
+    text-transform: capitalize;
+  }
+  
+  .availCard{
+    text-align: start;
+    padding:10px 15px;
+  }
+  .availCard ion-thumbnail{
+    --size: 160px;
+    --border-radius: 14px;
+    margin-bottom:10px;
+  }
+  .availCard ion-label{
+    display: block;
+    font-family: 'SF UI DISPLAY Semibold';
+  }
+  .availCard p{
+    font-size:10px;
+    font-family: 'SF UI DISPLAY Light';
+    color: #6E787C;
+    margin-top: 5px;
+  }
+  
+  .availCard .happiness{
+    font-size:30px;
+    margin:10px 0;
+    text-align: center;
+    padding: 0;
+  }
+  ion-grid.availGrid ion-col{
+    border: 1px solid #efefef;
+  }
+  

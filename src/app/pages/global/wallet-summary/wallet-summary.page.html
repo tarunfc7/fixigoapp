@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="wallet"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Wallet</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list lines="full" class="notifyList">
+    <ion-item *ngFor = "let result of walletSummaryResults">  
+      <ion-label>
+        <p class="ion-text-wrap">{{result.title}}</p> 
+        <div class="d-flex ion-align-items-end ion-justify-content-between">
+          <ion-text [color]="result.status == 'expired' ? 'danger' : 'success'"> {{result.Price}}</ion-text> 
+          <ion-text class="txtSmall">{{result.status}}: {{result.validity}}</ion-text> 
+        </div>
+      </ion-label>
+    </ion-item>
+    </ion-list>
+</ion-content>

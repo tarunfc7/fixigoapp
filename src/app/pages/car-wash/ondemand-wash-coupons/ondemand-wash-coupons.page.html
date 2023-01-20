@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="ondemand-package-details"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Alto 800</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="availGrid ion-no-padding">
+    <ion-row>
+      <ion-col size="6" *ngFor="let result of availSummaryResults">
+        <div class="availCard ion-text-center">
+          <ion-thumbnail>
+            <!-- <img alt="availedwash" src="../../../../assets/images/car-wash/availed_wash1.png" /> -->
+            <img alt="availed wash coupons"  [src]="result.imagePath"/>
+          </ion-thumbnail>
+          <ion-label class="ion-text-start">
+            <h4>{{result.validity}}</h4>
+            <p class="ion-text-wrap">{{result.address}}</p>
+          </ion-label>
+          <div class="happiness d-flex ion-align-items-center ion-justify-content-between">
+            <ion-icon name="ellipse-outline"></ion-icon>
+            <ion-icon name="happy-outline"></ion-icon>
+            <ion-icon name="ellipsis-horizontal-circle-outline"></ion-icon>
+            <ion-icon name="sad-outline"></ion-icon>
+            <ion-icon name="ellipsis-vertical-circle-outline"></ion-icon>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

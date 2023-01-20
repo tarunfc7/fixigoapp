@@ -1,0 +1,102 @@
+ion-toolbar {
+    --background: #ffffff;
+    --color: #19422d;
+  
+    /* --border-color: #f24aec; */
+    --border-width: 0px 0 0.55px 0;
+    /* --border-style: double; */
+  
+    /* --min-height: 80px; */
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+  }
+  
+  ion-item.serviceInfo {
+    --padding-start: 15px;
+    --padding-top:15px;
+    --padding-bottom:10px;
+  }
+  ion-item.serviceDateInfo{
+    --padding-start: 15px;
+    --inner-padding-end:0px;
+  }
+  ion-item.serviceDateInfo ion-label{
+    font-size:13px;  
+    text-align: center;  
+    margin:0px;
+    cursor: pointer;
+  }
+  ion-item.serviceDateInfo ion-label.active{
+    font-size:13px;
+    background: #232323;
+    color: white;
+    padding:5px 1px;
+    border-radius: 5px;
+  }
+  ion-item.serviceDateInfo ion-icon{
+    background: #efefef;
+    padding:7px;
+    border-radius: 5px;
+  }
+  
+  /* iOS places the subtitle above the title */
+  ion-card-header.ios {
+    display: flex;
+    flex-flow: column-reverse;
+  }
+  .bdrBtm{
+    border-bottom: 0.55px solid #c8c7cc;
+  }
+  
+  ion-item.bookServiceItem {
+    --padding-start: 15px;
+    --background: rgba(17, 17, 16, 0.74);
+    --border-radius: 10px;
+    font-size: 13px;
+    --padding-end: 0px;
+    color: white;
+    margin-bottom: 10px;
+    --inner-padding-end: 0px;
+  }
+  
+  ion-item.bookServiceItem ion-button {
+    margin: 0px;
+    --background: #222222;
+  }
+  
+  ion-item.packageInfo{  
+    --padding-start: 15px;
+    --padding-top:15px;
+    --padding-bottom:15px;
+  }
+  ion-item.packageInfo ion-label h4{
+    font-size:14px;
+  }
+  ion-item.packageInfo ion-label p{
+    font-size:12px;
+  }
+  ion-item.packageInfo ion-text{
+    font-size: 13px;
+  }
+  ion-item.packageInfo ion-text span{
+    text-decoration: line-through;
+    color: #a6a6a6;
+    margin-left:10px;
+  }
+
+  ion-item.serviceInfo{
+    ion-thumbnail{
+        width:75px;
+        margin:0px;
+    }
+    ion-label{
+        h4{
+            font-size:16px;
+        }
+        p{
+            color: #5C6164;
+            font-family: 'SF UI DISPLAY Light';
+            font-size:12px;
+        }
+    }
+  }

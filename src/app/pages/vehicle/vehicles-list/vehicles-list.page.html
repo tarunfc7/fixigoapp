@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Your Vehicles</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="serviceInfo" *ngFor="let result of vehicleResults" (click)="vehcileInformation()">
+    <ion-card-content class="ion-no-padding">
+      <ion-list  class="ion-padding-vertical serviceInfoList">
+        <ion-item lines="full" detail="true" class="ion-align-items-start">
+          <ion-thumbnail slot="start">
+            <img [src]="result.imagePath" alt="{{ result.title }}" />
+          </ion-thumbnail>
+          <ion-label class="ion-no-margin">{{ result.title }}
+          <ion-text>{{ result.subtitle }}</ion-text></ion-label>
+          <ion-icon name="ellipsis-vertical"  slot="end" size="small" (click)="menu()"></ion-icon>
+        </ion-item>
+        <div class="typeList">
+          <ion-label>{{ result.vehicleBody }}</ion-label>
+          <ion-icon name="ellipse"></ion-icon>
+          <ion-label>{{ result.fuelType }}</ion-label>
+          <ion-icon name="ellipse"></ion-icon>
+          <ion-label>{{ result.vehicleYear }}</ion-label>
+          <ion-icon name="ellipse"></ion-icon>
+          <ion-label>{{ result.vehicleColor }}</ion-label>
+        </div>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button class="btnAdd ion-margin" expand="block">
+    <ion-icon name="add" slot="start"></ion-icon>
+    Add vehicle
+  </ion-button>
+</ion-content>

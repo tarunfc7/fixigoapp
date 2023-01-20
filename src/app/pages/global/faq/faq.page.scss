@@ -1,0 +1,46 @@
+ion-header ion-toolbar {
+    --background: #ffffff;
+    --color: #19422d;
+  
+    /* --border-color: #f24aec; */
+    --border-width: 0px 0 0.55px 0;
+    /* --border-style: double; */
+  
+    /* --min-height: 80px; */
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+  }
+  
+  ion-content{
+    --background: #ffffff;
+  }
+  .d-flex{
+    display:flex; 
+  }
+  .fd-Column{
+    flex-direction: column;
+  }
+  .bdrBtm{
+    border-bottom: 0.55px solid #eee;
+  }
+  
+  ion-list.faqSearchList ion-item{
+    --background: #ffffff;
+    --padding-top:15px;
+    --padding-bottom:15px;
+    ion-label{
+        font-family: 'SF UI DISPLAY Semibold';
+    }   
+  }
+  
+  ion-list.faqSearchList ion-item:nth-child(even) {
+    --background: #E9F0F1;
+  }
+  ion-grid.faqSearchGrid{
+    background: #232323;
+    color: White;
+  }
+  h4{
+    color: #A9B6BC;
+    font-family: 'SF UI DISPLAY Semibold';
+  }

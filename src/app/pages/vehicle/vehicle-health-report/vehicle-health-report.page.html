@@ -1,0 +1,257 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="vehicles-list"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Vehicle Information</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="serviceInformation">
+    <ion-row>
+      <ion-col>
+        <ion-segment value="healthReport" (ionChange)="segmentChanged($event)" [(ngModel)]="segment">
+          <ion-segment-button value="healthReport">
+            <ion-label>Health Report</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="serviceHistory">
+            <ion-label>Service History</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="documents">
+            <ion-label>Documents</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+      </ion-col>
+      <ion-col size="12" *ngIf= " this.segment == 'healthReport'">
+        <ion-label class="heading">Overall</ion-label>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+    <div *ngIf= " this.segment == 'healthReport'">
+      <ion-grid class="ion-no-padding bgWhite">
+        <ion-row  class="ion-no-padding d-flex">
+          <ion-col size="6"  class="ion-no-padding">
+            <ion-thumbnail  class="ion-no-padding serviceImg">
+              <img alt="Silhouette of mountains" src="../../../../assets/images/vehicles/Maruti Suzuki Alto.png" />
+            </ion-thumbnail>
+          </ion-col>
+          <ion-col size="6">
+            <div class="ion-text-end ion-padding-vertical ion-padding-end">
+              Alto 800
+              <h6 class="ion-no-margin">DLX4 XX58</h6>
+            </div>
+            <div class="ion-text-center ion-padding">
+              <h6 class="ion-no-margin">Over all condition</h6>
+              <ion-note color="success">Excellent</ion-note>
+            
+          </div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="bdrClass">
+          <ion-col size="6">
+            <div class="ion-text-center bdrLeft">
+              <h6 class="ion-no-margin">Odo meter</h6>
+              <ion-note color="dark">25090</ion-note>            
+            </div>
+          </ion-col>
+          <ion-col size="6">
+          <div class="ion-text-center mar10">
+            <h6 class="ion-no-margin">Last inspection date</h6>
+            <ion-note color="dark">27 Dec 2022</ion-note>
+          </div>
+        </ion-col>
+        </ion-row>
+      </ion-grid>
+          
+      <ion-grid class="ion-no-padding healthGrid bgWhite">
+        <h5 class="ion-padding-start ion-padding-top ion-no-margin">Vehicle Health</h5>
+        <ion-row>
+          <ion-col size="3" *ngFor="let result of results" class="ion-text-center">
+            <ion-icon name="checkmark-circle" color="success" size="small"></ion-icon>
+            <ion-thumbnail>
+              <img [src]="result.imagePath" alt="{{ result.title }}"/>
+            </ion-thumbnail>
+            <ion-label>{{ result.title }}</ion-label>    
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      
+      <ion-grid class="bookServiceGrid bgWhite">
+        <ion-row class="ion-no-padding">
+          <ion-col class="ion-padding-horizontal ion-padding-top">
+            <ion-item lines="none" class="bookServiceItem">
+              <ion-label>Service Due on 7th* Dec 2022</ion-label>
+              <ion-button shape="round" size="default">Book Now</ion-button>
+            </ion-item>
+            <div class="ion-text-center">
+              <ion-button color="primary" fill="clear" size="small"><ion-icon name="download-outline" slot="start"></ion-icon> Download PDF</ion-button>
+            </div>
+          
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      
+      <ion-grid class="recommendedServiceGrid ion-padding-vertical">
+        <ion-row>
+          <ion-col size="12">
+            <h5 class="ion-no-margin ion-padding-horizontal">Recommended services</h5>
+            <ion-slides [options]="trendingslideOpts">
+              <ion-slide>
+                <ion-card  class="ion-text-center trendingCard">
+                  <ion-card-content>
+                    <img
+                      alt="alternater"
+                      src="../../assets/icon/alternater.svg"
+                    />
+                    <ion-label class="ion-text-start">Clutch Set</ion-label>
+                    <ion-label class="ion-text-start txtsmall">Every 5000KM
+                    </ion-label>
+                    <ion-button fill="solid" color="dark" expand="block"
+                      >Book Now</ion-button
+                    >
+                    <ion-text>61 users booked near you</ion-text>
+                  </ion-card-content>
+                </ion-card>
+              </ion-slide>
+            
+              <ion-slide>
+                <ion-card  class="ion-text-center trendingCard">
+                  <ion-card-content>
+                    <img
+                      alt="wipers"
+                      src="../../assets/icon/wipers.svg"
+                    />
+                    <ion-label class="ion-text-start">wipers</ion-label>
+                    <ion-label class="ion-text-start txtsmall">Every 6-12 months</ion-label>
+                    <ion-button fill="solid" color="dark" expand="block"
+                      >Book Now</ion-button
+                    >
+                    <ion-text>710 users booked near you</ion-text>
+                  </ion-card-content>
+                </ion-card>
+              </ion-slide>
+            
+              <ion-slide>
+                <ion-card  class="ion-text-center trendingCard">
+                  <ion-card-content>
+                    <img
+                      alt="Plus1"
+                      src="../../assets/icon/Plus1.svg"
+                    />
+                    <ion-label class="ion-text-start">Plus1</ion-label>
+                    <ion-label class="ion-text-start txtsmall">Every 1000</ion-label>
+                    <ion-button fill="solid" color="dark" expand="block"
+                      >Book Now</ion-button
+                    >
+                    <ion-text>0 users booked service</ion-text>
+                  </ion-card-content>
+                </ion-card>
+              </ion-slide>
+            
+              <ion-slide>
+                <ion-card  class="ion-text-center trendingCard">
+                  <ion-card-content>
+                    <img
+                      alt="pngwing"
+                      src="../../assets/icon/pngwing.com (16).svg"
+                    />
+                    <ion-label class="ion-text-start">pngwing</ion-label>
+                    <ion-label class="ion-text-start txtsmall">Every 1000</ion-label>
+                    <ion-button fill="solid" color="dark" expand="block"
+                      >Book Now</ion-button
+                    >
+                    <ion-text>0 users booked service</ion-text>
+                  </ion-card-content>
+                </ion-card>
+              </ion-slide>
+            </ion-slides>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    
+    </div>
+    
+    <div *ngIf= " this.segment == 'serviceHistory'">
+      <!-- <h6 class="ion-no-margin">segment</h6> -->
+      <ion-card class="segmentInfo ion-no-margin ion-margin-horizontal no-shadow">
+        <ion-card-content class="ion-no-padding">
+          <ion-label class="totalAmt">
+          <h4 class="d-flex ion-align-items-center ion-justify-content-center">
+            <ion-icon name="cash-outline" color="success" slot="start"></ion-icon> Total spend : 1604</h4>
+          </ion-label>
+        </ion-card-content>
+      </ion-card>
+      <ion-card class="segmentInfo">
+        <ion-card-content class="ion-no-padding">
+          <ion-list>
+            <ion-item lines="none" class="ion-align-items-start">
+              <ion-thumbnail slot="start">
+                <img alt="Maruti Suzuki Alto"  src="../../../../assets/images/vehicles/Maruti Suzuki Alto.png"/>
+              </ion-thumbnail>
+              <ion-label class="ion-no-margin">
+              <div class="d-flex ion-align-items-center">
+                <p>Job card : 545114545</p> 
+                <ion-text class="status">Completed</ion-text>  
+              </div>
+              <h4>Alto 800</h4> 
+              <div class="d-flex ion-justify-content-between">
+                <p>Schedule service</p> 
+                <ion-text class="pricing">Rs. 802</ion-text>  
+              </div>     
+                
+              </ion-label>     
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+      <ion-card class="segmentInfo">
+      <ion-card-content class="ion-no-padding">
+        <ion-list>
+          <ion-item lines="none" class="ion-align-items-start">
+            <ion-thumbnail slot="start">
+              <img alt="Maruti Suzuki Alto"  src="../../../../assets/images/vehicles/Maruti Suzuki Alto.png"/>
+            </ion-thumbnail>
+            <ion-label class="ion-no-margin">
+            <div class="d-flex ion-align-items-center">
+              <p>Job card : 545114545</p> 
+              <ion-text class="status">Completed</ion-text>  
+            </div>
+            <h4>Alto 800</h4> 
+            <div class="d-flex ion-justify-content-between">
+              <p>Schedule service</p> 
+              <ion-text class="pricing">Rs. 802</ion-text>  
+            </div>     
+              
+            </ion-label>     
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+    </div>
+    
+    <div *ngIf= " this.segment == 'documents'" >      
+      <ion-card class="documentInfo" *ngFor="let result of documentInforesults">
+        <ion-card-content class="ion-no-padding">
+          <ion-list>
+            <ion-item lines="none" class="ion-align-items-start">
+              <ion-thumbnail slot="start">
+                <img [src]="result.imagePath" alt="{{ result.title }}"/>
+              </ion-thumbnail>
+              <ion-label class="ion-no-margin">
+                <h4>{{ result.title }}</h4>       
+                <p>{{ result.carModel }},{{ result?.plateNo }}</p>
+                <p>Validity : {{ result.validity }}</p> 
+              </ion-label>     
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+      
+      <ion-button class="btnAdd ion-margin" expand="block">
+        <ion-icon name="add" slot="start"></ion-icon>
+        Add more documents
+      </ion-button>
+    </div>
+
+</ion-content>

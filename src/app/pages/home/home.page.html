@@ -5,70 +5,141 @@
 </ion-header> -->
 
 <ion-content>
-  <ion-card class="vehicleCard">    
-    <ion-card-content>
-      <ion-grid [fixed]="true" class="no-padding">
-        <ion-row class="no-padding d-flex">
-          <ion-col size="8" class="no-padding">
-            <ion-text>Vehicle Health</ion-text>
-            <ion-row class="no-padding">
-              <ion-col size="6" class="no-padding">
-                <ion-label>Performance</ion-label>
-              </ion-col>
-              <ion-col size="6" class="no-padding">
-                <ion-progress-bar
-                  [value]="0.55"
-                  class="my-buffer-progress"
-                ></ion-progress-bar>
-              </ion-col>
-            </ion-row>
-            <ion-row class="no-padding">
-              <ion-col size="6" class="no-padding">
-                <ion-label>Safety</ion-label>
-              </ion-col>
-              <ion-col size="6" class="no-padding">
-                <ion-progress-bar
-                  [value]="0.67"
-                  class="my-safety-progress"
-                ></ion-progress-bar>
-              </ion-col>
-            </ion-row>
-            <ion-row class="no-padding">
-              <ion-col size="6" class="no-padding">
-                <ion-label>Comfort</ion-label>
-              </ion-col>
-              <ion-col size="6" class="no-padding">
-                <ion-progress-bar
-                  [value]="0.35"
-                  class="my-comfort-progress"
-                ></ion-progress-bar>
-              </ion-col>
-            </ion-row>
-          </ion-col>
-          <ion-col class="no-padding ion-text-end">
-            <div class="percent">
-              <svg>
-                <circle cx="50" cy="50" r="40"></circle>
-                <circle cx="50" cy="50" r="40" [style.--percent]="32"></circle>
-              </svg>
-              <div class="number">
-                <h3>Excellent</h3>
+
+  <ion-grid class="ion-no-padding profile">
+    <ion-row class="ion-padding d-flex ion-align-items-center">
+      <ion-col class="ion-no-padding" size="6">
+        <ion-item lines="none" id="item-modal" color="transparent">
+          <ion-avatar slot="start">
+            <img
+              alt="Maruti Suzuki Alto"
+              src="../../../assets/images/cars/Maruti Suzuki Alto.svg"
+            />
+          </ion-avatar>
+          <ion-label
+            >Alto 800
+            <ion-text>Petrol</ion-text>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col class="ion-no-padding">
+        <ion-button  id="select-modal" class="ion-float-right btnCity">
+          <ion-icon slot="end" name="caret-down-outline"></ion-icon>
+          Greater Noida
+        </ion-button>        
+      </ion-col>
+    </ion-row>
+
+    <ion-card class="vehicleCard">    
+      <ion-card-content>
+        <ion-grid [fixed]="true" class="ion-no-padding">
+          <ion-row class="ion-no-padding d-flex">
+            <ion-col size="8" class="ion-no-padding">
+              <ion-text>Vehicle Health</ion-text>
+              <ion-row class="ion-no-padding">
+                <ion-col size="6" class="ion-no-padding">
+                  <ion-label>Performance</ion-label>
+                </ion-col>
+                <ion-col size="6" class="ion-no-padding">
+                  <ion-progress-bar
+                    [value]="0.55"
+                    class="my-buffer-progress"
+                  ></ion-progress-bar>
+                </ion-col>
+              </ion-row>
+              <ion-row class="ion-no-padding">
+                <ion-col size="6" class="ion-no-padding">
+                  <ion-label>Safety</ion-label>
+                </ion-col>
+                <ion-col size="6" class="ion-no-padding">
+                  <ion-progress-bar
+                    [value]="0.67"
+                    class="my-safety-progress"
+                  ></ion-progress-bar>
+                </ion-col>
+              </ion-row>
+              <ion-row class="ion-no-padding">
+                <ion-col size="6" class="ion-no-padding">
+                  <ion-label>Comfort</ion-label>
+                </ion-col>
+                <ion-col size="6" class="ion-no-padding">
+                  <ion-progress-bar
+                    [value]="0.35"
+                    class="my-comfort-progress"
+                  ></ion-progress-bar>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+            <ion-col class="ion-no-padding ion-text-end">
+              <div class="percent">
+                <svg>
+                  <circle cx="50" cy="50" r="40"></circle>
+                  <circle cx="50" cy="50" r="40" [style.--percent]="32"></circle>
+                </svg>
+                <div class="number">
+                  <h3>Excellent</h3>
+                </div>
               </div>
-            </div>
-          </ion-col>
-        </ion-row>
-        <ion-row class="no-padding">
-          <ion-col class="no-padding">
-            <ion-item lines="none" class="bookServiceItem">
-              <ion-label>Service due on 7th Dec 2022</ion-label>
-              <ion-button shape="round" size="default">Book Now</ion-button>
-            </ion-item>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-card-content>
-  </ion-card>
-  
+            </ion-col>
+          </ion-row>
+          <ion-row class="ion-no-padding">
+            <ion-col class="ion-no-padding">
+              <ion-item lines="none" class="bookServiceItem">
+                <ion-label>Service due on 7th Dec 2022</ion-label>
+                <ion-button shape="round" size="default">Book Now</ion-button>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-row class="servicesGrid">
+      <ion-col size="4" *ngFor="let result of results" class="ion-text-center" (click)="viewService()">
+        <ion-thumbnail>
+          <img
+            alt="{{ result.title }}"
+            [src]="result.imagePath"
+          />
+        </ion-thumbnail>
+        <ion-label>{{ result.title }}</ion-label>
+      </ion-col>
+    </ion-row>
+
+    <ion-slides [options]="couponSlides" class="couponSlide">
+      <ion-slide>
+        <ion-card  class="ion-text-center ion-no-padding couponCard">
+          <ion-card-content>
+            <img
+              alt="Car Wash"
+              src="../../assets/images/coupons/Group 1302.png"
+            />           
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+    
+      <ion-slide>
+        <ion-card  class="ion-text-center ion-no-padding couponCard">
+          <ion-card-content>
+            <img
+              alt="Package"
+              src="../../assets/images/coupons/Group 1303.png"
+            />           
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  </ion-grid>
+
+  <ion-grid class="adsGrid ion-padding">
+    <ion-row class="ion-no-padding">
+      <ion-col size="12" class="ion-no-padding">
+        <ion-thumbnail>
+          <img alt="ads" src="../../../assets/images/coupons/Group 1313.png" />
+        </ion-thumbnail>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
   
   <h6 class="ion-padding-start">On-Demand Services</h6>
   <ion-slides [options]="slideOpts">
@@ -80,9 +151,7 @@
             src="../../assets/icon/car wash.png"
           />
           <ion-label class="ion-text-start">Car Wash</ion-label>
-          <ion-button fill="solid" color="dark" expand="block"
-            >Book Now</ion-button
-          >
+          <ion-button fill="solid" color="dark" expand="block" (click)="ondemand()">Book Now</ion-button>
         </ion-card-content>
       </ion-card>
     </ion-slide>
@@ -95,7 +164,7 @@
             src="../../assets/icon/package.png"
           />
           <ion-label class="ion-text-start">Package</ion-label>
-          <ion-button fill="solid" color="dark" expand="block"
+          <ion-button fill="solid" color="dark" expand="block" (click)="ondemandpackage()"
             >Book Now</ion-button
           >
         </ion-card-content>
@@ -207,67 +276,328 @@
   
   <h6 class="ion-padding-start">Clients Review</h6>
   <ion-slides [options]="reviewslideOpts">
-  <ion-slide>
-    <ion-card class="ion-text-end reviewCard">
-     
-      <ion-card-content>
-      <ion-label class="ion-text-start">Sami Shaik</ion-label>
-      <ion-label class="ion-text-start txtsmall">Fast service</ion-label>
-      <p class="ion-text-start">Mostly happy with service I were washing my vehicle in the showroom before and now I tried just to check it was awesome from FIXIGO time saving fast service and home delivery service, keep going FIXIGO in Delhi hope you people will start soon all over India and thanks for Introducing this service in Delhi</p>
-      <ion-chip>
-        <ion-icon name="logo-facebook" color="primary"></ion-icon>
-        <ion-label>Facebook</ion-label>
-      </ion-chip>
+    <ion-slide>
+      <ion-card class="ion-text-end reviewCard" (click)="reviews()">
       
-      </ion-card-content>
-    </ion-card>
-  </ion-slide>
-  <ion-slide>
-    <ion-card class="ion-text-end reviewCard">
-     
-      <ion-card-content>
-      <ion-label class="ion-text-start">Sami Shaik</ion-label>
-      <ion-label class="ion-text-start txtsmall">Fast service</ion-label>
-      <p class="ion-text-start">Mostly happy with service I were washing my vehicle in the showroom before and now I tried just to check it was awesome from FIXIGO time saving fast service and home delivery service, keep going FIXIGO in Delhi hope you people will start soon all over India and thanks for Introducing this service in Delhi</p>
-      <ion-chip>
-        <ion-icon name="logo-facebook" color="primary"></ion-icon>
-        <ion-label>Facebook</ion-label>
-      </ion-chip>
+        <ion-card-content>
+        <ion-label class="ion-text-start">Sami Shaik</ion-label>
+        <ion-label class="ion-text-start txtsmall">Fast service</ion-label>
+        <p class="ion-text-start">Mostly happy with service I were washing my vehicle in the showroom before and now I tried just to check it was awesome from FIXIGO time saving fast service and home delivery service, keep going FIXIGO in Delhi hope you people will start soon all over India and thanks for Introducing this service in Delhi</p>
+        <ion-chip>
+          <ion-icon name="logo-facebook" color="primary"></ion-icon>
+          <ion-label>Facebook</ion-label>
+        </ion-chip>
+        
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card class="ion-text-end reviewCard" (click)="reviews()">
       
-      </ion-card-content>
-    </ion-card>
-  </ion-slide>
-  <ion-slide>
-    <ion-card class="ion-text-end reviewCard">
-     
-      <ion-card-content>
-      <ion-label class="ion-text-start">Sami Shaik</ion-label>
-      <ion-label class="ion-text-start txtsmall">Fast service</ion-label>
-      <p class="ion-text-start">Mostly happy with service I were washing my vehicle in the showroom before and now I tried just to check it was awesome from FIXIGO time saving fast service and home delivery service, keep going FIXIGO in Delhi hope you people will start soon all over India and thanks for Introducing this service in Delhi</p>
-      <ion-chip>
-        <ion-icon name="logo-facebook" color="primary"></ion-icon>
-        <ion-label>Facebook</ion-label>
-      </ion-chip>
+        <ion-card-content>
+        <ion-label class="ion-text-start">Sami Shaik</ion-label>
+        <ion-label class="ion-text-start txtsmall">Fast service</ion-label>
+        <p class="ion-text-start">Mostly happy with service I were washing my vehicle in the showroom before and now I tried just to check it was awesome from FIXIGO time saving fast service and home delivery service, keep going FIXIGO in Delhi hope you people will start soon all over India and thanks for Introducing this service in Delhi</p>
+        <ion-chip>
+          <ion-icon name="logo-facebook" color="primary"></ion-icon>
+          <ion-label>Facebook</ion-label>
+        </ion-chip>
+        
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card class="ion-text-end reviewCard" (click)="reviews()">
       
-      </ion-card-content>
-    </ion-card>
-  </ion-slide>
-  <ion-slide>
-    <ion-card class="ion-text-end reviewCard">
-     
-      <ion-card-content>
-      <ion-label class="ion-text-start">Sami Shaik</ion-label>
-      <ion-label class="ion-text-start txtsmall">Fast service</ion-label>
-      <p class="ion-text-start">Mostly happy with service I were washing my vehicle in the showroom before and now I tried just to check it was awesome from FIXIGO time saving fast service and home delivery service, keep going FIXIGO in Delhi hope you people will start soon all over India and thanks for Introducing this service in Delhi</p>
-      <ion-chip>
-        <ion-icon name="logo-facebook" color="primary"></ion-icon>
-        <ion-label>Facebook</ion-label>
-      </ion-chip>
+        <ion-card-content>
+        <ion-label class="ion-text-start">Sami Shaik</ion-label>
+        <ion-label class="ion-text-start txtsmall">Fast service</ion-label>
+        <p class="ion-text-start">Mostly happy with service I were washing my vehicle in the showroom before and now I tried just to check it was awesome from FIXIGO time saving fast service and home delivery service, keep going FIXIGO in Delhi hope you people will start soon all over India and thanks for Introducing this service in Delhi</p>
+        <ion-chip>
+          <ion-icon name="logo-facebook" color="primary"></ion-icon>
+          <ion-label>Facebook</ion-label>
+        </ion-chip>
+        
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card class="ion-text-end reviewCard" (click)="reviews()">
       
-      </ion-card-content>
-    </ion-card>
-  </ion-slide>
-  
+        <ion-card-content>
+        <ion-label class="ion-text-start">Sami Shaik</ion-label>
+        <ion-label class="ion-text-start txtsmall">Fast service</ion-label>
+        <p class="ion-text-start">Mostly happy with service I were washing my vehicle in the showroom before and now I tried just to check it was awesome from FIXIGO time saving fast service and home delivery service, keep going FIXIGO in Delhi hope you people will start soon all over India and thanks for Introducing this service in Delhi</p>
+        <ion-chip>
+          <ion-icon name="logo-facebook" color="primary"></ion-icon>
+          <ion-label>Facebook</ion-label>
+        </ion-chip>
+        
+        </ion-card-content>
+      </ion-card>
+    </ion-slide> 
   
   </ion-slides>
+
+  <ion-slides [options]="couponSlides" class="couponSlide">
+    <ion-slide>
+      <ion-card  class="ion-text-center ion-no-padding serviceAdsCard">
+        <ion-card-content>
+          <img
+            alt="Service Ads"
+            src="../../assets/images/coupons/serviceAds.png"
+          />           
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  
+    <ion-slide>
+      <ion-card  class="ion-text-center ion-no-padding serviceAdsCard">
+        <ion-card-content>
+          <img
+            alt="Service Ads 2"
+            src="../../assets/images/coupons/serviceAds2.png"
+          />           
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+  <h6 class="ion-padding-start ion-no-margin">Signs of your car</h6>
+  <ion-slides [options]="couponSlides" class="couponSlide">
+    <ion-slide *ngFor="let result of signItemResults">
+      <ion-grid class="signsItem">
+        <ion-row>
+          <ion-col size="12">
+            <div class="ion-padding signsItemCard" [style.background]="result.color">
+              <h4 class="ion-no-margin">{{ result.title }}</h4>
+              <p class="ion-no-margin">{{ result.subTitle }}</p>
+              <img [src]="result.imagePath" alt="{{ result.title }}"/>
+              <ion-button shape="round" size="default" color="primary">Request to call</ion-button>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+  
+  </ion-slides>
+
+  <ion-grid class="referFriend">
+    <ion-row>
+      <ion-col size="12">
+        <div class="ion-padding">
+          <h4 class="ion-no-margin">Refer your friends</h4>
+          <p class="ion-no-margin">Refer a friend and get one time wash free.</p>
+          <img src="../../../assets/images/refer_friend.png" alt="refer a friend"/>
+          <ion-button shape="round" size="default" color="primary" class="ion-float-right">Invite</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-modal
+  #itemModal
+  trigger="item-modal"
+  [initialBreakpoint]="0.6"
+  [breakpoints]="[0, 0.25, 0.5, 0.75]"
+  handleBehavior="cycle"
+>
+    <ng-template>
+      <ion-content class="ion-padding">
+        <div class="ion-margin-top">
+          <!-- <ion-label class="ion-padding-horizontal">Select Modal</ion-label> -->
+          <div class="d-flex ion-justify-content-between ion-align-items-center">
+            <h6 class="ion-no-margin ion-padding-start">Services</h6>
+            <ion-button fill="clear" size="small"><ion-icon slot="start" name="add"></ion-icon> Add</ion-button>
+          </div>
+
+          <ion-slides [options]="trendingslideOpts">
+            <ion-slide>
+              <div class="selectedDefault">
+                <p>Default</p>
+              </div>
+              <ion-card class="ion-text-center vehicleListCard">
+                <ion-card-content>
+                  <div class="selectedCard">
+                    <ion-icon
+                      color="success"
+                      name="checkmark-circle"
+                    ></ion-icon>
+                  </div>
+
+                  <img
+                    alt="Silhouette of mountains"
+                    src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+                  />
+                  <div
+                    class="
+                      d-flex
+                      ion-justify-content-between ion-align-items-center
+                    "
+                  >
+                    <ion-label class="ion-text-start">
+                      Service Name
+                      <ion-label class="ion-text-start txtsmall"
+                        >DLF 1000</ion-label
+                      >
+                    </ion-label>
+
+                    <ion-text>Gold</ion-text>
+                  </div>
+                  <!-- <ion-label class="ion-text-start"> Service Name 1 </ion-label>
+                  <ion-label class="ion-text-start txtsmall"
+                    >Every 1000</ion-label
+                  >
+
+                  <ion-text>0 users booked service</ion-text> -->
+                </ion-card-content>
+              </ion-card>
+            </ion-slide>
+
+            <ion-slide>
+              <ion-card class="ion-text-center vehicleListCard">
+                <ion-card-content>
+                  <img
+                    alt="Silhouette of mountains"
+                    src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+                  />
+                  <div
+                    class="
+                      d-flex
+                      ion-justify-content-between ion-align-items-center
+                    "
+                  >
+                    <ion-label class="ion-text-start">
+                      Service Name
+                      <ion-label class="ion-text-start txtsmall"
+                        >DLF 1000</ion-label
+                      >
+                    </ion-label>
+
+                    <ion-text>Gold</ion-text>
+                  </div>
+                </ion-card-content>
+              </ion-card>
+            </ion-slide>
+
+            <ion-slide>
+              <ion-card class="ion-text-center vehicleListCard">
+                <ion-card-content>
+                  <img
+                    alt="Silhouette of mountains"
+                    src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+                  />
+                  <div
+                    class="
+                      d-flex
+                      ion-justify-content-between ion-align-items-center
+                    "
+                  >
+                    <ion-label class="ion-text-start">
+                      Service Name
+                      <ion-label class="ion-text-start txtsmall"
+                        >DLF 1000</ion-label
+                      >
+                    </ion-label>
+
+                    <ion-text>Gold</ion-text>
+                  </div>
+                </ion-card-content>
+              </ion-card>
+            </ion-slide>
+
+            <ion-slide>
+              <ion-card class="ion-text-center vehicleListCard">
+                <ion-card-content>
+                  <img
+                    alt="Silhouette of mountains"
+                    src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+                  />
+                  <div
+                    class="
+                      d-flex
+                      ion-justify-content-between ion-align-items-center
+                    "
+                  >
+                    <ion-label class="ion-text-start">
+                      Service Name
+                      <ion-label class="ion-text-start txtsmall"
+                        >DLF 1000</ion-label
+                      >
+                    </ion-label>
+
+                    <ion-text>Gold</ion-text>
+                  </div>
+                </ion-card-content>
+              </ion-card>
+            </ion-slide>
+          </ion-slides>
+          <ion-button expand="block" color="dark" (click)="itemModal.dismiss()"
+            >Done</ion-button
+          >
+          <ion-button class="ion-margin-top"
+            expand="block"
+            fill="outline"
+            color="dark"
+            (click)="manageVehicle()"
+            >Manage</ion-button
+          >
+        </div>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal
+    #selectModal
+    trigger="select-modal"
+    [initialBreakpoint]="0.5"
+    [breakpoints]="[0, 0.25, 0.5, 0.75]"
+    handleBehavior="cycle"
+  >
+    <ng-template>
+      <ion-content class="ion-padding">
+        <div class="ion-margin-top">
+          <ion-label class="ion-padding-horizontal">Item Modal.</ion-label>
+          <ion-grid>
+            <ion-row>
+              <ion-col size="4"
+                ><ion-chip [outline]="true">Outline</ion-chip></ion-col
+              >
+              <ion-col size="4"
+                ><ion-chip [outline]="true">Outline</ion-chip></ion-col
+              >
+              <ion-col size="4"
+                ><ion-chip [outline]="true">Outline</ion-chip></ion-col
+              >
+              <ion-col size="4"
+                ><ion-chip [outline]="true">Outline</ion-chip></ion-col
+              >
+              <ion-col size="4"
+                ><ion-chip [outline]="true">Outline</ion-chip></ion-col
+              >
+              <ion-col size="4"
+                ><ion-chip [outline]="true">Outline</ion-chip></ion-col
+              >
+              <ion-col size="4"
+                ><ion-chip [outline]="true">Outline</ion-chip></ion-col
+              >
+              <ion-col size="4"
+                ><ion-chip [outline]="true">Outline</ion-chip></ion-col
+              >
+              <ion-col size="4"
+                ><ion-chip [outline]="true">Outline</ion-chip></ion-col
+              >
+            </ion-row>
+          </ion-grid>
+          <ion-button
+            expand="block"
+            color="dark"
+            (click)="selectModal.dismiss()"
+            >Done</ion-button
+          >
+        </div>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
 </ion-content>

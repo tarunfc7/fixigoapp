@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs"></ion-back-button>
+    </ion-buttons>
+    <ion-title>FAQ</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="faqSearchGrid">
+    <ion-row class="ion-text-center">
+      <ion-col>
+        <h4 class="ion-no-margin">How can we help you?</h4>
+        <ion-searchbar color="light" [debounce]="1000" (ionChange)="handleChange($event)"></ion-searchbar>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+
+  <ion-list class="faqSearchList" lines="none">
+    <ion-item *ngFor="let result of results">
+      <ion-label>{{ result }}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

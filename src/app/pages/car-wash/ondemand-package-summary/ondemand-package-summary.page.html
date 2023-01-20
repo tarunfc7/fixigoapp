@@ -1,0 +1,94 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="ondemand-package"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Order Confirmation</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid class="ion-no-padding ion-padding-vertical bdrBtm carDetailSummary">
+    <ion-row class="ion-no-padding">
+      <ion-col class="ion-no-padding">
+        <ion-item lines="none" class="ion-align-items-center">
+          <ion-thumbnail slot="start">
+            <img  alt="maruthi suzuki alto" src="../../../../assets/images/cars/Maruti Suzuki Alto.svg" />
+          </ion-thumbnail>
+          <ion-label class="ion-no-margin ion-margin-start">
+            <h4>Alto 800</h4>       
+            <p>DL X4 XX58</p>
+          </ion-label>     
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="ion-no-padding ion-padding-top confirmServiceGrid bdrBtm">
+   
+    <ion-row class="ion-no-padding ion-margin-horizontal">
+      <ion-col class="ion-no-padding">
+        <h6 class="ion-no-margin ion-padding-bottom bdrBtm">Services</h6>
+        <ion-item lines="none" class="ion-align-items-start ion-margin-top">
+          <ion-icon slot="start" src="../../../../assets/images/car-wash/Component 37 – 2.svg"></ion-icon>
+          <ion-label class="ion-no-margin">
+            <span class="d-flex ion-justify-content-between ion-align-items-center txtHead">4 Exterior shine and interior shine   
+              <span class="txtPrice">₹149  <ion-icon name="close-circle"></ion-icon></span>            
+            </span>
+            <p>Premium body wash</p>
+            <p>Interior cleaning</p>
+            <span class="d-flex ion-justify-content-between txtValidity">Start Date: 01 Jan 2023  <span>1 Month validity</span> </span>
+                    
+          </ion-label> 
+              
+        </ion-item>     
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-item lines="full" class="ion-no-margin walletItem">     
+    <ion-label>
+      <h3>Use wallet money</h3>
+      <ion-text color="success">Wallet amount : 549</ion-text>      
+    </ion-label>
+    <ion-icon name="checkbox" slot="start" color="success"></ion-icon>
+  </ion-item>   
+
+  <h6 class="ion-no-margin ion-margin-top ion-margin-horizontal">Offers</h6>
+  <ion-item lines="full" detail="true">     
+    <ion-label color="success">
+      <h3>Fixigo flat50% off</h3>          
+    </ion-label>
+    <ion-icon name="ribbon"  slot="start" color="success"></ion-icon>
+  </ion-item>  
+
+
+  <h6 class="ion-no-margin ion-margin-top ion-margin-horizontal">Amount</h6>
+  <ion-grid class="amtGrid">
+    <ion-row>
+      <ion-col size="9" class="ion-text-end ion-no-padding">Sub total</ion-col>
+      <ion-col size="1" class="ion-text-center ion-no-padding">:</ion-col>
+      <ion-col size="2" class="ion-text-end ion-no-padding">₹149</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="9" class="ion-text-end ion-no-padding">Wallet amount</ion-col>
+      <ion-col size="1" class="ion-text-center ion-no-padding">:</ion-col>
+      <ion-col size="2" class="ion-text-end ion-no-padding">₹149</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="9" class="ion-text-end ion-no-padding">Discount</ion-col>
+      <ion-col size="1" class="ion-text-center ion-no-padding">:</ion-col>
+      <ion-col size="2" class="ion-text-end ion-no-padding">60</ion-col>
+    </ion-row>   
+  </ion-grid>
+  <ion-row class="ion-margin-horizontal totalAmt">
+    <ion-col size="9" class="ion-text-end ion-no-padding">Payable amount</ion-col>
+    <ion-col size="1" class="ion-text-center ion-no-padding">:</ion-col>
+    <ion-col size="2" class="ion-text-end ion-no-padding">₹149</ion-col>
+  </ion-row>
+  <ion-button fill="solid" color="dark" expand="block" class="ion-margin" (click)="payNow()">Pay Now</ion-button>
+
+  
+
+</ion-content>

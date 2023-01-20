@@ -1,0 +1,56 @@
+
+ion-toolbar {
+    --background: #ffffff;
+    --color: #19422d;
+  
+    /* --border-color: #f24aec; */
+    --border-width: 0px 0 0.55px 0;
+    /* --border-style: double; */
+  
+    /* --min-height: 80px; */
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+  }
+  
+  ion-grid.reviewCountGrid{
+    background: #F6F6F6;
+  }
+  
+  ion-grid.reviewCountGrid ion-label{
+    font-size:14px;
+  }
+  ion-list.reviewList ion-item p{
+    font-size:16px;
+    margin-bottom: 15px;  
+    margin-top:10px;
+  }
+  
+  ion-list.reviewList ion-item ion-text{
+    font-size:13px;
+    color: #FF1408;
+  }
+  
+  ion-list.reviewList ion-item p{
+    font-size:13px;
+    color: #434547;
+    font-family: 'SF UI DISPLAY Light';
+    line-height: 1.65em;
+  }
+  .d-flex{
+    display: flex;
+  }
+  .reviewDate{
+    display: flex;
+    align-items: center;
+    font-size:11px;
+    color: #91989E;
+  }
+  .reviewDate ion-icon{
+    margin-right:5px;
+  }
+  h4{
+    font-size: 16px;
+  }
+  ion-icon.logoIcon{
+    font-size:75px;
+  }

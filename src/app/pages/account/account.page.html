@@ -24,8 +24,8 @@
   </ion-card>
   
   <ion-list class="moreList">
-    <ion-item detail="true" lines="none" *ngFor="let result of results">
-      <ion-label>{{ result }} </ion-label>
+    <ion-item detail="true" lines="none" *ngFor="let result of results" (click)="page(result.page)">
+      <ion-label>{{ result.title }} </ion-label>
     </ion-item>
     
   </ion-list>

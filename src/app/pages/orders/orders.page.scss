@@ -61,14 +61,33 @@ ion-card-header.ios {
     color: black;
   }
   
-  ion-segment-button {
-    --color-checked: white;
-    --indicator-color: black;
-    min-height: 40px;
-  }
+  // ion-segment-button {
+  //   --color-checked: white;
+  //   --indicator-color: black;
+  //   min-height: 40px;
+  // }
   
   ion-card.defaultCard {
     margin: 5px 0 5px;
+    ion-card-content{
+      ion-thumbnail{
+        width:75px;
+      }
+      ion-label{
+        p{
+          color: #231F20;
+          font-family: 'SF UI DISPLAY Light'; 
+          font-size:12px;
+          letter-spacing: 0.3px;
+          margin-bottom: 5px;
+        }
+        small{
+          font-size:12px;
+          margin-top: 5px;
+        }
+      }
+    }
+
   }
   
   ion-item.filterItem {
@@ -79,3 +98,23 @@ ion-card-header.ios {
     --background: transparent;
   }
   
+  ion-grid.serviceInformation {
+    background: #F6F6F6;
+    padding: 10px;
+  }
+  ion-segment {
+    --background: #fff;
+  }
+  ion-segment-button {
+    --border-width: 0px;
+    --indicator-height: 40px;
+    height: 40px;
+    --indicator-color: #231F20;
+    --color: #878D97;
+    --color-checked: #fff;
+  }
+  .serviceInformation ion-label.heading {
+    font-size: 14px;
+    font-weight: 500;
+    color: #a6a6a6;
+  }

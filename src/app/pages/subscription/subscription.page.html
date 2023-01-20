@@ -6,7 +6,7 @@
 
 <ion-content>
   <ion-list>
-    <ion-item lines="none">
+    <ion-item lines="none" (click)="subscription()">
       <ion-card class="subscriptionCard gold">
         <ion-card-content>
           <ion-card>
@@ -14,44 +14,41 @@
               <ion-item detail="true" lines="none">
                 <ion-thumbnail slot="start">
                   <img
-                    alt="Silhouette of mountains"
-                    src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+                    alt="Maruthi Suzuki Alto 800"
+                    src="../../../assets/images/cars/Maruti Suzuki Alto.svg"
                   />
                 </ion-thumbnail>
                 <ion-label>
-                  <p>ID: 12345</p>
-                  <h3>Service Name</h3>
-                  <small>Expiry date: 01-01-2030</small>
+                  <p>ID : 545114545</p>
+                  <h3>Alto 800 DL X4 XX58</h3>
+                  <small>Expiry date : 25 Jan 2023</small>
                 </ion-label>         
               </ion-item>
             </ion-card-content>
           </ion-card>
-          <p>Subscription service</p>
+          <p>Fixigo Gold membership</p>
         </ion-card-content>
       </ion-card>
      
     </ion-item>
-    <ion-item lines="none">
+    <ion-item lines="none" (click)="ondemandpackage()">
       <ion-card class="subscriptionCard silver">
         <ion-card-content>
           <ion-card>
             <ion-card-content>
               <ion-item detail="true" lines="none">
                 <ion-thumbnail slot="start">
-                  <img
-                    alt="Silhouette of mountains"
-                    src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
-                  />
+                  <img  alt="Maruthi Suzuki Alto 800"  src="../../../assets/images/cars/Maruti Suzuki Alto.svg"/>
                 </ion-thumbnail>
                 <ion-label>
-                  <p>ID: 12345</p>
-                  <h3>Service Name</h3>
-                  <small>Expiry date: 01-01-2030</small>
+                  <p>ID : 545114545</p>
+                  <h3>Alto 800 DL X4 XX58</h3>
+                  <small>Expiry date : 25 Jan 2023</small>
                 </ion-label>         
               </ion-item>
             </ion-card-content>
           </ion-card>
-          <p>Subscription service</p>
+          <p>On demand Subscription Package</p>
         </ion-card-content>
       </ion-card>
     </ion-item>

@@ -89,11 +89,7 @@ ion-card-header.ios {
   .percent {
     position: relative;
   }
-  /* .d-flex{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  } */
+ 
   ion-card {
     --background: #ffffff;
     border: 1px solid #eeeeee;
@@ -102,12 +98,16 @@ ion-card-header.ios {
     border-radius: 24px;
   }
   ion-card.vehicleCard{
-    margin-top:60px;
+    // margin-top:60px;
+    padding: 5px;
+    border-radius: 24px;
+    margin: 0px 15px 15px;
     ion-label {
         display: block;
         padding: 3px;
         color:#969696;
         letter-spacing: .6px;
+        font-size:13px;
       }
       ion-text{
         font-size: 18px;
@@ -118,7 +118,7 @@ ion-card-header.ios {
     padding: 10px 10px 0px;
   }
   ion-item.bookServiceItem {
-    --padding-start: 15px;
+    --padding-start: 15px !important;
     --background: rgba(255, 255, 0, 0.432);
     border-radius: 64px;
     font-size: 13px;
@@ -128,25 +128,27 @@ ion-card-header.ios {
     ion-label{
         letter-spacing: 0px;
     }
+    ion-button {
+      margin: 0px;
+      --background: orange;
+    }
   }
-  ion-button {
-    margin: 0px;
-    --background: orange;
-  }
+  
   ion-label {
     display: block;
   }
-  img {
-    width: 125px;
-    height: 125px;
-    object-fit: contain;
-  }
+  
   ion-card.serviceCard,
   ion-card.trendingCard {
     padding: 15px;
     margin: 7px 6px;
     width: 95%;
     --background: #ffffff;
+    // img {
+    //   width: 125px;
+    //   height: 125px;
+    //   object-fit: contain;
+    // }
   }
   ion-slides {
     width: 100%;
@@ -183,3 +185,197 @@ ion-card-header.ios {
   ion-chip{
     --background: transparent;
   }
+
+  
+  ion-grid.profile{
+    background: #ffffff;
+    ion-item{
+      --padding-start: 0px;
+      ion-text {
+        display: block;
+        font-size: 16px;
+        color: #5C6164;
+        font-family: 'SF UI DISPLAY Light';
+      }
+      ion-label{
+        font-family: 'SF UI DISPLAY Semibold';
+      }
+      ion-avatar {
+        --border-radius: 0px;
+        width: 70px;
+        height: 45px;
+        margin-inline-end: 10px;
+      }
+    }
+    ion-button.btnCity{
+      --background: #F1F1F1;
+      border: 1px solid #E7E7E8;
+      color: #232323;
+      border-radius: 11px;
+    }
+
+    .servicesGrid{
+      ion-thumbnail {
+        display: inline-block;
+        width: 54px;
+        height: 54px;
+      }
+      ion-col {
+        border: 0.55px solid #efefef;
+        padding: 15px;
+      }
+      ion-label {
+        font-size: 14px;
+        display: block;
+        font-family: 'SF UI DISPLAY Light';
+        color: #292C31;
+        padding: 5px;
+      }
+    }
+
+    ion-slides.couponSlide{
+      margin:10px 0px 10px 10px;
+      ion-card.couponCard{
+        border: 0px;
+        padding: 0px;
+        margin: 0px;  
+        margin-top:15px;
+        ion-card-content{
+          padding:0px;
+        }    
+      }
+    }
+
+    
+   
+  }
+
+  ion-grid.adsGrid{
+    ion-thumbnail {
+      --size: 100%;
+      --border-radius: 14px;
+    }
+  }
+
+  ion-card.serviceAdsCard{
+    --background: transparent;
+    border: 0px;
+    margin: 0px;
+    margin-top:10px;
+    ion-card-content{
+      padding:0;
+    }
+  }
+
+  ion-grid.referFriend{
+    background: white;   
+      img{
+        display: block;
+        margin: 0 auto;
+        padding:15px 10px;
+      }    
+      ion-button{
+        margin-bottom:15px;
+      }
+      p{
+        margin-top:5px;
+      }
+  }
+
+  ion-grid.signsItem{
+    .signsItemCard{
+      background: #97E9D9;
+      border-radius: 20px;
+      text-align: end;
+      margin-bottom: 15px;
+    } 
+    img{
+      display: block;
+      padding:15px 0px;
+      width: 160px;
+      height: 130px;
+      object-fit: cover;
+    }    
+    ion-button{
+      margin-bottom:15px;
+    }
+    p{
+      margin-top:5px;
+      font-family: 'SF UI DISPLAY Light';
+      text-align: start;      
+      font-size: 12px;
+      letter-spacing: .13px;
+    }
+    h4{
+      text-align: start;
+      font-size:16px;
+    }
+  }
+  .d-flex{
+display: flex;
+  }
+  .selectedDefault p {
+    background: #2dd36f;
+    color: white;
+    position: absolute;
+    /* inset: 4px -15px auto auto; */
+    padding: 2px 7px;
+    font-size: 10px;
+    top:10px;
+    right:0;
+    z-index:1;
+    border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+  }
+  .selectedDefault p:after {
+    /* this creates the "folded" part of our ribbon */
+    
+    content: "";
+    height: 0;
+    width: 0;
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    border-top: 10px solid #2dd36f80;  
+    border-right: 10px solid transparent;
+  }
+
+  .selectedCard {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+  }
+  .selectedCard ion-icon {
+    font-size: 24px;
+  }
+ion-card.vehicleListCard{
+  padding: 15px;
+  margin: 7px 6px;
+  width: 95%;
+  --background: #ffffff;
+  border: 1px solid #eeeeee;
+  box-shadow: none;
+  border-radius: 24px;
+  img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+  }
+  ion-label.txtsmall {
+    font-weight: 300;
+    padding: 0px 0px 5px;
+    font-size: 11px;
+    color: gray;
+  }
+  ion-text {
+    font-size: 11px;
+    color: orange;
+  }
+  ion-label{
+    font-size: 11px;
+  }
+}
+  
+  

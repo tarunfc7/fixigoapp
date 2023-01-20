@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Repair Quote</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+<ion-list>
+  <ion-item lines="none" (click)="details()">
+    <ion-card class="subscriptionCard">
+      <ion-card-content class="gold">
+        <ion-card>
+          <ion-card-content>
+            <ion-item lines="full" >
+              <ion-thumbnail slot="start">
+                <img  alt="Maruthi Suzuki Alto 800"  src="../../../../assets/images/cars/Maruti Suzuki Alto.svg"/>
+              </ion-thumbnail>
+              <ion-label>
+                <p>Job card : 545114545</p>
+                <h3>Alto 800 DL X4 XX58</h3>
+                <small>30/12/2022, 05:30PM</small>
+              </ion-label>         
+            </ion-item>
+            <div class="d-flex ion-align-items-center ion-justify-content-between quantityBox">
+              <ion-note class="ion-padding-start ion-no-margin">Service /Parts</ion-note>          
+              <ion-text color="success" class="ion-padding-end">₹1352</ion-text>
+            </div>
+            <div class="d-flex ion-align-items-center ion-justify-content-between quantityBox">
+              <h5 class="ion-padding-start ion-no-margin">Service</h5>
+              <span class="quantityItem">QTY: 2</span>
+              <p  class="ion-padding-end">Price: ₹850</p>
+            </div>
+            <div class="d-flex ion-align-items-center ion-justify-content-between quantityBox">
+              <h5 class="ion-padding-start ion-no-margin">Parts</h5>
+              <span class="quantityItem">QTY: 1</span>
+              <p class="ion-padding-end">Price: ₹502</p>
+            </div>
+          </ion-card-content>
+        </ion-card>
+        <p class="servicefootItem ion-text-center">Pending</p>
+      </ion-card-content>
+    </ion-card>
+   
+  </ion-item>
+  <ion-item lines="none" (click)="details()">
+    <ion-card class="subscriptionCard">
+      <ion-card-content class="green">
+        <ion-card>
+          <ion-card-content>
+            <ion-item lines="full">
+              <ion-thumbnail slot="start">
+                <img  alt="Maruthi Suzuki Alto 800"  src="../../../../assets/images/cars/Maruti Suzuki Alto.svg"/>
+              </ion-thumbnail>
+              <ion-label>
+                <p>Job card : 545114545</p>
+                <h3>Alto 800 DL X4 XX58</h3>
+                <small>30/12/2022, 05:30PM</small>
+              </ion-label>         
+            </ion-item>
+            <div class="d-flex ion-align-items-center ion-justify-content-between quantityBox">
+              <ion-note class="ion-padding-start ion-no-margin">Service /Parts</ion-note>          
+              <ion-text color="success" class="ion-padding-end">₹1352</ion-text>
+            </div>
+            <div class="d-flex ion-align-items-center ion-justify-content-between quantityBox">
+              <h5 class="ion-padding-start ion-no-margin">Service</h5>
+              <span class="quantityItem">QTY: 2</span>
+              <p  class="ion-padding-end">Price : ₹850</p>
+            </div>
+            <div class="d-flex ion-align-items-center ion-justify-content-between quantityBox">
+              <h5 class="ion-padding-start ion-no-margin">Parts</h5>
+              <span class="quantityItem">QTY: 1</span>
+              <p class="ion-padding-end">Price : ₹502</p>
+            </div>
+          </ion-card-content>
+        </ion-card>
+        <p class="servicefootItem ion-text-center">Submitted by you</p>
+      </ion-card-content>
+    </ion-card>
+  </ion-item>
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,112 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="ondemand"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Order Confirmation</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid class="ion-no-padding ion-padding-vertical bdrBtm carDetailSummary">
+    <ion-row class="ion-no-padding">
+      <ion-col class="ion-no-padding">
+        <ion-item lines="none" class="ion-align-items-center">
+          <ion-thumbnail slot="start">
+            <img  alt="maruthi suzuki alto" src="../../../../assets/images/cars/Maruti Suzuki Alto.svg" />
+          </ion-thumbnail>
+          <ion-label class="ion-no-margin ion-margin-start">
+            <h4>Alto 800</h4>       
+            <p>DL X4 XX58</p>
+          </ion-label>     
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="ion-no-padding ion-padding-top confirmlocationGrid bdrBtm">
+    <ion-row class="ion-no-padding ion-margin-horizontal">
+      <ion-col class="ion-no-padding">
+        <h6 class="ion-no-margin">Location, time & date</h6>
+        <ion-item lines="full">
+         <ion-icon slot="start" name="location" size="small"></ion-icon>
+          <ion-label class="ion-no-margin">
+            H-167, H Block, Sector 63, Noida, UP
+          </ion-label>     
+        </ion-item>
+        <ion-item lines="none">
+          <ion-icon slot="start" name="today-outline" size="small"></ion-icon>
+          <ion-label class="ion-no-margin">
+             14 Jun 2021, 06:30 AM
+          </ion-label>     
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="ion-no-padding ion-padding-top confirmServiceGrid bdrBtm">
+    <ion-row class="ion-no-padding ion-margin-horizontal">
+      <ion-col class="ion-no-padding">
+        <h6 class="ion-no-margin">Services</h6>
+        <ion-item lines="full">
+        <ion-icon slot="start" name="ellipse"></ion-icon>
+          <ion-label class="ion-no-margin ion-margin-start d-flex ion-justify-content-between">
+            <span>Interior shine</span>
+            <span>₹145</span>
+          </ion-label>     
+        </ion-item>
+        <ion-item lines="none">
+          <ion-icon slot="start" name="ellipse"></ion-icon>
+          <ion-label class="ion-no-margin ion-margin-start d-flex ion-justify-content-between">
+            <span>Exterior shine</span>
+            <span>₹145</span>
+          </ion-label>       
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <h6 class="ion-no-margin ion-margin-top ion-margin-horizontal">Offers</h6>
+  <ion-item lines="full" detail="true">     
+    <ion-label color="success">
+      <h3>Fixigo flat50% off</h3>          
+    </ion-label>
+    <ion-icon name="ribbon"  slot="start" color="success"></ion-icon>
+  </ion-item>  
+
+
+  <h6 class="ion-no-margin ion-margin-top ion-margin-horizontal">Amount</h6>
+  <ion-grid class="amtGrid">
+    <ion-row>
+      <ion-col size="9" class="ion-text-end ion-no-padding">Sub total</ion-col>
+      <ion-col size="1" class="ion-text-center ion-no-padding">:</ion-col>
+      <ion-col size="2" class="ion-text-end ion-no-padding">₹298</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="9" class="ion-text-end ion-no-padding">Wallet amount</ion-col>
+      <ion-col size="1" class="ion-text-center ion-no-padding">:</ion-col>
+      <ion-col size="2" class="ion-text-end ion-no-padding">0</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="9" class="ion-text-end ion-no-padding">Discount</ion-col>
+      <ion-col size="1" class="ion-text-center ion-no-padding">:</ion-col>
+      <ion-col size="2" class="ion-text-end ion-no-padding">60</ion-col>
+    </ion-row>   
+  </ion-grid>
+  <ion-row class="ion-margin-horizontal totalAmt">
+    <ion-col size="9" class="ion-text-end ion-no-padding">Pending cash collection</ion-col>
+    <ion-col size="1" class="ion-text-center ion-no-padding">:</ion-col>
+    <ion-col size="2" class="ion-text-end ion-no-padding">₹238</ion-col>
+  </ion-row>
+
+  <ion-row class="ion-margin">
+    <ion-col size="6">
+      <ion-button fill="solid" color="primary"  expand="block" (click)="orderSummary()">Pay with cash</ion-button>
+    </ion-col>
+    <ion-col size="6">
+    <ion-button fill="solid" expand="block" class="btnDanger" (click)="orderSummary()">Pay Now</ion-button>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

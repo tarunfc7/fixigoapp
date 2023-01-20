@@ -1,0 +1,152 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Alto 800</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <h6 class="ion-margin">Recent booked</h6>
+  <ion-card class="recentBookedCard">
+    <ion-card-header class="bdrBtm">
+      <ion-card-title>Today : 22/06/2022, 05:30PM</ion-card-title>
+      <ion-card-subtitle>H-167, H Block, Sector 63, Noida, Uttar Pradesh...</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content class="ion-no-padding">
+      <ion-item lines="none">
+      <ion-icon name="radio-button-on" slot="start" color="success"></ion-icon>
+        <ion-label color="success">Status : Ninja is on the way.</ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+
+  <div class="d-flex ion-align-items-center ion-justify-content-between">
+    <h6 class="ion-margin">Wash coupons</h6>
+    <p class="ion-margin txtGray">2 Wash availed / 4  Wash left</p>
+  </div>
+ 
+
+  <ion-slides [options]="couponslideOpts">
+    <ion-slide>
+      <div class="couponCard">
+        <div class="header">      
+          <img alt="coupons" src="../../../../assets/images/car-wash/Body wash.svg" />
+          <p class="ion-no-margin">Exterior Shine</p>
+          <p class="ion-no-margin">Interior Shine </p>
+        </div>
+        <div class="rip"></div>
+        <div class="footer">
+          <ion-button color="dark" expand="block">Book Service</ion-button>
+        </div>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="couponCard">
+        <div class="header">      
+          <img alt="coupons" src="../../../../assets/images/car-wash/Body wash.svg" />
+          <p class="ion-no-margin">Exterior Shine</p>
+          <p class="ion-no-margin">Interior Shine </p>
+        </div>
+        <div class="rip"></div>
+        <div class="footer">
+          <ion-button color="dark" expand="block">Book Service</ion-button>
+        </div>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="couponCard">
+        <div class="header">      
+          <img alt="coupons" src="../../../../assets/images/car-wash/Body wash.svg" />
+          <p class="ion-no-margin">Exterior Shine</p>
+          <p class="ion-no-margin">Interior Shine </p>
+        </div>
+        <div class="rip"></div>
+        <div class="footer">
+          <ion-button color="dark" expand="block">Book Service</ion-button>
+        </div>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="couponCard">
+        <div class="header">      
+          <img alt="coupons" src="../../../../assets/images/car-wash/Body wash.svg" />
+          <p class="ion-no-margin">Exterior Shine</p>
+          <p class="ion-no-margin">Interior Shine </p>
+        </div>
+        <div class="rip"></div>
+        <div class="footer">
+          <ion-button color="dark" expand="block">Book Service</ion-button>
+        </div>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+  <div class="d-flex ion-align-items-center ion-justify-content-between">
+    <h6 class="ion-no-margin ion-margin-horizontal">Availed wash coupons</h6>
+    <ion-button fill="clear" size="small" color="secondary" (click)="availWashCoupons()">View all</ion-button>
+  </div>
+  <ion-slides [options]="availwashslideOpts" class="ion-margin-start">
+    <ion-slide>
+      <div class="availCard">
+        <ion-thumbnail>
+          <img alt="availedwash" src="../../../../assets/images/car-wash/availed_wash1.png" />
+        </ion-thumbnail>
+        <ion-label>
+          <h4>26/05/2022</h4>
+          <p>H-167, H Block, Sector 63, Noida, UP</p>
+        </ion-label>
+        <div class="happiness d-flex ion-align-items-center ion-justify-content-between">
+          <ion-icon name="ellipse-outline"></ion-icon>
+          <ion-icon name="happy-outline"></ion-icon>
+          <ion-icon name="ellipsis-horizontal-circle-outline"></ion-icon>
+          <ion-icon name="sad-outline"></ion-icon>
+          <ion-icon name="ellipsis-vertical-circle-outline"></ion-icon>
+        </div>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="availCard">
+        <ion-thumbnail>
+          <img alt="availedwash" src="../../../../assets/images/car-wash/availed_wash2.png" />
+        </ion-thumbnail>
+        <ion-label>
+          <h4>12/07/2023</h4>
+          <p>H-167, H Block, Sector 63, Noida, UP</p>
+        </ion-label>
+        <div class="happiness d-flex ion-align-items-center ion-justify-content-between">
+          <ion-icon name="ellipse-outline"></ion-icon>
+          <ion-icon name="happy-outline"></ion-icon>
+          <ion-icon name="ellipsis-horizontal-circle-outline"></ion-icon>
+          <ion-icon name="sad-outline"></ion-icon>
+          <ion-icon name="ellipsis-vertical-circle-outline"></ion-icon>
+        </div>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="availCard">
+        <ion-thumbnail>
+          <img alt="availedwash" src="../../../../assets/images/car-wash/availed_wash1.png" />
+        </ion-thumbnail>
+        <ion-label>
+          <h4>12/07/2023</h4>
+          <p>H-167, H Block, Sector 63, Noida, UP</p>
+        </ion-label>
+        <div class="happiness d-flex ion-align-items-center ion-justify-content-between">
+          <ion-icon name="ellipse-outline"></ion-icon>
+          <ion-icon name="happy-outline"></ion-icon>
+          <ion-icon name="ellipsis-horizontal-circle-outline"></ion-icon>
+          <ion-icon name="sad-outline"></ion-icon>
+          <ion-icon name="ellipsis-vertical-circle-outline"></ion-icon>
+        </div>
+      </div>
+    </ion-slide>   
+  </ion-slides>
+  
+ 
+
+</ion-content>

@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs"></ion-back-button>
+    </ion-buttons>
+    <ion-title>on-Demand Package</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>   
+    <ion-card-content class="ion-no-padding">
+      <ion-item lines="none" class="ion-align-items-start serviceInfo bdrBtm">
+        <ion-thumbnail slot="start">
+          <img  alt="maruthi suzuki alto" src="../../../../assets/images/cars/Maruti Suzuki Alto.svg" />
+        </ion-thumbnail>
+        <ion-label class="ion-no-margin ion-margin-start">
+          <h4>Alto 800</h4>       
+          <p>DL X4 XX58</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item lines="none" class="serviceDateInfo">         
+        <ion-label class="active">Today</ion-label>
+        <ion-label>18 Jan</ion-label>
+        <ion-label>19 Jan</ion-label>
+        <ion-label>20 Jan</ion-label>
+        <ion-icon slot="end" name="calendar" size="small"></ion-icon>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <ion-card *ngFor="let result of packageResults">   
+    <ion-card-content class="ion-no-padding">
+      <ion-item lines="none" class="ion-align-items-start packageInfo">
+       <ion-icon [src]= "result.imagePath" slot="start" class="ion-no-margin ion-margin-end"></ion-icon>
+        <ion-label class="ion-no-margin">
+          <h4>{{result.title}}</h4>       
+          <p>{{result.desc}}</p>
+          <p>{{result.validity}}</p>
+          <ion-text color="success">{{result.currentPrice}}
+            <span>{{result.Price}}</span>
+          </ion-text>
+          <ion-button size="small" color="dark" class="ion-float-end">
+            <ion-icon name="add" slot="start" size="small"></ion-icon> Add</ion-button>
+        </ion-label> 
+        
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>  
+    <ion-item lines="none" class="bookServiceItem" (click)="packageSummary()">
+      <ion-label>Total: ₹498</ion-label>
+      <ion-button size="default">Continue</ion-button>
+    </ion-item>
+  </ion-toolbar>
+</ion-footer>

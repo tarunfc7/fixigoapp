@@ -1,0 +1,88 @@
+
+ion-toolbar {
+    --background: #ffffff;
+    --color: #19422d;
+  
+    /* --border-color: #f24aec; */
+    --border-width: 0px 0 0.55px 0;
+    /* --border-style: double; */
+  
+    /* --min-height: 80px; */
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+  }
+  
+  ion-content{
+    --background: #ffffff;
+  }
+  .d-flex{
+    display:flex;
+  }
+  .bdrBtm{
+    border-bottom: 0.55px solid #eee;
+  }
+  
+  .txtSmall{
+    font-size:11px;
+    color: #a6a6a6;
+    text-transform: capitalize;
+  }
+  
+  .timeline ul{
+    list-style-type: none;
+  }
+  .timeline ul li{
+    margin-bottom:20px;
+  }
+  .timeline ul li ion-text{
+    display: block;
+    margin-top:5px;
+    color: green;
+    font-size:13px;
+  }
+  .timelineItem{
+    display: flex;
+    position: relative;
+  }
+  .timelineItem::before {
+    background: #798085;
+    content: "";
+    height: 100%;
+    left: 12px;
+    position: absolute;
+    top: 20px;
+    width: 2px;
+    z-index: -1;
+  }
+  .timelineItem:last-child:before{
+    height:0;
+  }
+  .timeline-icon ion-icon{
+    font-size:26px;
+  }
+  .timeline-content{
+    padding-left:10px;
+    margin-top: 3px;
+  }
+  ion-grid.imgGrid img{  
+    border-radius: 4px;
+  }
+  ion-grid.imgGrid ion-col{
+    margin-left: 4px;
+  }
+  ion-grid.imgGrid ion-col:first-child{
+    margin-left: 0px;
+  }
+  .rating ion-icon{
+    font-size: 36px;
+    color: #a6a6a6;
+    margin: 10px auto;
+  }
+  ion-button.btnReview{
+    color: #1492FF;
+    font-family: 'SF UI DISPLAY Semibold';
+    font-size: 16px;
+  }
+  ion-label{
+    font-family: 'SF UI DISPLAY Semibold';
+  }

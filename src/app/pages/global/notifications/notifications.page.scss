@@ -1,0 +1,43 @@
+
+ion-toolbar {
+    --background: #ffffff;
+    --color: #19422d;
+  
+    /* --border-color: #f24aec; */
+    --border-width: 0px 0 0.55px 0;
+    /* --border-style: double; */
+  
+    /* --min-height: 80px; */
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+  }
+  
+  ion-item ion-thumbnail{
+    --border-radius:15px;
+    background: #efefef;
+    padding:15px;
+  }
+  
+  .notifyList p{
+    font-size:13px;
+    margin-top:10px;
+    color: #231F20;
+    font-family: 'SF UI DISPLAY Light';
+    line-height:1.65em;
+    letter-spacing:0.6px;
+  }
+  .notifyDate{
+    display: flex;
+    align-items: center;
+    font-size:11px;
+    color: #91989E;
+    justify-content: end;
+    margin-top:10px;
+  }
+  .notifyDate ion-icon{
+    margin-right:5px;
+  }
+  h3{
+    color: #231F20;
+    font-size:16px;
+  }

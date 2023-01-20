@@ -1,0 +1,77 @@
+
+ion-toolbar {
+    --background: #ffffff;
+    --color: #19422d;
+  
+    /* --border-color: #f24aec; */
+    --border-width: 0px 0 0.55px 0;
+    /* --border-style: double; */
+  
+    /* --min-height: 80px; */
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+  }
+  
+  ion-content{
+    --background: #ffffff;
+  }
+  .d-flex{
+    display:flex;
+  }
+  .bdrBtm{
+    border-bottom: 0.55px solid #eee;
+  }
+  ion-checkbox {
+    --size: 16px;
+    --background-checked: #232323;
+    margin: 0px;
+    margin-right: 5px;
+  }
+  ion-grid.approvalGrid{
+    background: #f6f6f6;
+  }
+  ion-grid.approvalGrid {
+        ion-label{
+            color: #969696;
+        }
+        ion-item{
+            --background: transparent;
+            --padding-start: 0px;
+            --inner-padding-end: 5px;  
+            ion-label{
+                color: #000000;
+            }      
+        }
+    }
+  .approvalItems ion-item ion-label{
+    font-size:13px;
+  }
+  .approvalItemList ion-item{
+    --background: transparent;
+    --padding-start: 0px;
+    --inner-padding-end: 5px;
+    --padding-top:10px;
+    ion-thumbnail{
+        --border-radius: 10px;
+    }
+  }
+  .approvalItemList ion-item p{
+    font-size: 12px;
+    color: #4E4E4E;
+    margin-top:5px;
+    font-family: 'SF UI DISPLAY Light';
+    letter-spacing: 0.6px;
+  }
+  .approvalItems ion-item{
+    --inner-padding-end: 20px;
+    --padding-top: 0px;
+  }
+  .approvalItems ion-item:last-child{
+    --inner-padding-end: 0px;
+    --padding-top: 0px;
+  }
+  .approvalItemList ion-item ion-label{
+    font-size:13px;
+    margin:0px 5px;
+  }
+  

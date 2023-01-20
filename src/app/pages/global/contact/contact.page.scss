@@ -1,0 +1,114 @@
+ion-header ion-toolbar {
+    --background: #ffffff;
+    --color: #19422d;
+  
+    /* --border-color: #f24aec; */
+    --border-width: 0px 0 0.55px 0;
+    /* --border-style: double; */
+  
+    /* --min-height: 80px; */
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+  }
+  
+  ion-content{
+    --background: #ffffff;
+  }
+  .d-flex{
+    display:flex; 
+  }
+  .fd-Column{
+    flex-direction: column;
+  }
+  .bdrBtm{
+    border-bottom: 0.55px solid #eee;
+  }
+  
+  .txtSmall{
+    font-size:11px;
+    color: #a6a6a6;
+    text-transform: capitalize;
+  }
+  img.referImg{
+    height:200px;
+    width:100%;
+    object-fit: contain;
+  }
+  ion-label{
+    margin-bottom:15px;
+    margin-top:40px;
+    font-size:24px;
+    font-family: 'SF UI DISPLAY Semibold';
+  }
+  h3{
+    font-size:24px;
+    font-family: 'SF UI DISPLAY Semibold';
+    color: #292929;
+    margin-top:10px;
+  }
+  p{
+    margin-bottom:20px;
+    margin-top:0px;
+    letter-spacing: 0.6px;
+    color: #292929;
+    font-size:13px;
+    font-family: 'SF UI DISPLAY Light';
+    line-height: 1.5em;
+  }
+  small{
+    margin-bottom: 10px;
+  }
+  ion-note{
+    margin-bottom:0px;
+  }
+  ion-button.btnInvite{
+    --background: #232323;
+    --padding-start: 4em;
+      --padding-end: 4em;
+      height: 2.5em;
+  }
+  .contactBox{
+    width:275px;
+    margin:0 auto;
+    text-align: center;
+  }
+  ion-button.btnCall{
+    --padding-start: 2.5em;
+    --padding-end: 2.5em;
+    height: 3.5em;
+    --background: #0564AD;
+  }
+  
+  ion-button.btnWhatsapp{
+    // --padding-start: 1.5em;
+    // --padding-end: 1.5em;
+    height: 3.5em;
+    --background: #0CBB1D;
+    color: white;
+  }
+  .contactMail{
+    background: #eee;
+    width:100%;
+    border-radius: 10px;
+    padding:5px 10px;
+  }
+  .contactMail .email{
+    margin-left: 5px;
+  }
+  .contactMail ion-chip ion-icon{
+    margin:0px;
+    color: red;
+  }
+  ion-footer ion-toolbar {
+    --background: #D4D4D4;
+    --color: #3E3F3F;
+    --border-width: 0px 0 0px 0;
+    --min-height: 50px;
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  .bdrSeparator{
+    border-right: 1px solid #A7ABAF;
+  }

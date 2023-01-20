@@ -1,0 +1,179 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="service-order-confirmation"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Mechanical Order Summary</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid class="ion-padding bdrBtm orderSummaryGrid">
+    <ion-row class="ion-no-padding">
+      <ion-col class="ion-no-padding">
+        <div class="d-flex ion-justify-content-between ion-align-items-start">
+          <ion-label class="ion-no-margin">
+            <h4>Job card : 545114545</h4> 
+          </ion-label> 
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="ion-no-padding ion-padding-vertical bdrBtm carDetailSummary">
+    <ion-row class="ion-no-padding">
+      <ion-col class="ion-no-padding">
+        <ion-item lines="none" class="ion-align-items-center">
+          <ion-thumbnail slot="start">
+            <img  alt="maruthi suzuki alto" src="../../../../assets/images/cars/Maruti Suzuki Alto.svg" />
+          </ion-thumbnail>
+          <ion-label class="ion-no-margin ion-margin-start">
+            <h4>Alto 800</h4>       
+            <p>DL X4 XX58</p>
+          </ion-label>     
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="ion-no-padding ion-padding-top confirmlocationGrid bdrBtm">
+    <ion-row class="ion-no-padding ion-margin-horizontal">
+      <ion-col class="ion-no-padding">
+        <h6 class="ion-no-margin">Location, time & date</h6>
+        <ion-item lines="full">
+         <ion-icon slot="start" name="location" size="small"></ion-icon>
+          <ion-label class="ion-no-margin">
+            H-167, H Block, Sector 63, Noida, UP
+          </ion-label>     
+        </ion-item>
+        <ion-item lines="none">
+          <ion-icon slot="start" name="today-outline" size="small"></ion-icon>
+          <ion-label class="ion-no-margin">
+             14 Jun 2021, 06:30 AM
+          </ion-label>     
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+ <h6 class="ion-margin-horizontal">Order tracking</h6>
+
+  <ion-grid class="orderStatusGrid">
+    <ion-row class="trackRow">
+      <ion-col size="3" *ngFor="let result of trackresults" class="ion-text-center" [class.active]= "result.status == 'Completed'">
+        <ion-icon [src]= "result.imagePath"></ion-icon>
+        <ion-label>{{ result.title }}</ion-label>    
+      </ion-col>  
+    </ion-row>   
+  </ion-grid>
+
+  <ion-grid class="ion-no-padding ion-padding-top confirmServiceGrid bdrBtm">
+    <ion-row class="ion-no-padding ion-margin-horizontal">
+      <ion-col class="ion-no-padding">
+        <h6 class="ion-no-margin">Services</h6>
+        <ion-item lines="full">
+          <ion-thumbnail slot="start">
+            <img alt="services" src="../../../../assets/images/services/Comprehensive_service.png" />
+          </ion-thumbnail>
+          <ion-label class="ion-no-margin ion-margin-start">
+            <div class="d-flex ion-justify-content-between">
+              <span>Basic service</span>
+              <span class="txtPrice">₹2999</span>
+            </div>
+            <ion-text class="txtProcess">Order Status: Processing</ion-text>
+            
+          </ion-label>     
+        </ion-item>
+        <ion-item lines="none">
+          <ion-thumbnail slot="start">
+            <img alt="services" src="../../../../assets/images/services/Standard_service.png" />
+          </ion-thumbnail>
+          <ion-label class="ion-no-margin ion-margin-start">
+            <div class="d-flex ion-justify-content-between">
+              <span>Basic AC service</span>
+              <span class="txtPrice">₹1999</span>
+            </div>
+            <ion-text class="txtPrice">Order Status: Completed</ion-text>
+          </ion-label>       
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  
+
+  <ion-grid class="ion-no-padding ion-padding-top personalNoteGrid bdrBtm">
+    <ion-row class="ion-no-padding ion-margin-horizontal">
+      <ion-col class="ion-no-padding">
+        <h6 class="ion-no-margin">Personal Note</h6>
+        <ion-item lines="none">         
+          <ion-label class="ion-no-margin">
+            <p>Wheel care Noise in wheels, AC Services Noise in wheels</p>
+          </ion-label>     
+        </ion-item>
+        
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="ion-no-padding ion-padding-top serviceAdvisorGrid bdrBtm">
+    <ion-row class="ion-no-padding ion-margin-horizontal">
+      <ion-col class="ion-no-padding">
+        <h6 class="ion-no-margin">Service advisor details</h6>
+        <ion-card class="advisorCard ion-no-margin">
+          <ion-card-header class="ion-no-padding">
+            <ion-card-title>Ankur Sharma</ion-card-title>           
+          </ion-card-header>
+        
+          <ion-card-content>
+            <p>Workshop Name : A2Z Car Care</p>
+            <p>Pickup time : 05:30PM</p>
+          </ion-card-content>
+        </ion-card>     
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-row class="ion-no-margin bdrBtm">
+    <ion-col size="12">
+      <ion-button fill="clear" color="secondary"  expand="block">
+        <ion-icon src="../../../../assets/images/car-wash/download.svg" slot="start"></ion-icon> Download Invoice</ion-button>
+    </ion-col>    
+  </ion-row>
+
+  <h6 class="ion-no-margin ion-margin-top ion-margin-horizontal">Amount</h6>
+  <ion-grid class="amtGrid">
+    <ion-row>
+      <ion-col size="9" class="ion-text-end ion-no-padding">Sub total</ion-col>
+      <ion-col size="1" class="ion-text-center ion-no-padding">:</ion-col>
+      <ion-col size="2" class="ion-text-end ion-no-padding">₹298</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="9" class="ion-text-end ion-no-padding">Wallet amount</ion-col>
+      <ion-col size="1" class="ion-text-center ion-no-padding">:</ion-col>
+      <ion-col size="2" class="ion-text-end ion-no-padding">0</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="9" class="ion-text-end ion-no-padding">Discount</ion-col>
+      <ion-col size="1" class="ion-text-center ion-no-padding">:</ion-col>
+      <ion-col size="2" class="ion-text-end ion-no-padding">60</ion-col>
+    </ion-row>   
+  </ion-grid>
+  <ion-row class="ion-margin-horizontal totalAmt">
+    <ion-col size="9" class="ion-text-end ion-no-padding">Paid Amount</ion-col>
+    <ion-col size="1" class="ion-text-center ion-no-padding">:</ion-col>
+    <ion-col size="2" class="ion-text-end ion-no-padding">₹238</ion-col>
+  </ion-row>
+
+  <ion-row class="ion-margin">
+    <ion-col size="6">
+      <ion-button fill="outline" color="primary" expand="block" (click)="cancel()">Cancel Order</ion-button>
+    </ion-col>
+    <ion-col size="6">
+    <ion-button fill="solid" expand="block" class="btnDanger" (click)="cancel()">Reschedule Order</ion-button>
+    </ion-col>
+  </ion-row>
+
+
+</ion-content>

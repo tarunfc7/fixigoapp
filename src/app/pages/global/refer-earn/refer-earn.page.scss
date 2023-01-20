@@ -1,0 +1,72 @@
+
+ion-toolbar {
+    --background: #ffffff;
+    --color: #19422d;
+  
+    /* --border-color: #f24aec; */
+    --border-width: 0px 0 0.55px 0;
+    /* --border-style: double; */
+  
+    /* --min-height: 80px; */
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+  }
+  
+  ion-content{
+    --background: #ffffff;
+  }
+  .d-flex{
+    display:flex;
+    flex-direction: column;
+  }
+  .bdrBtm{
+    border-bottom: 0.55px solid #eee;
+  }
+  
+  .txtSmall{
+    font-size:11px;
+    color: #a6a6a6;
+    text-transform: capitalize;
+  }
+  img.referImg{
+    height:200px;
+    width:100%;
+    object-fit: contain;
+  }
+  ion-label{
+    margin-bottom:40px;
+    margin-top:40px;
+    font-family: 'SF UI DISPLAY Semibold';
+    font-size: 24px;
+    text-align: center;
+  }
+  p{
+    margin-bottom:20px;
+    background: #F0F0F0;
+    padding: 15px 30px;
+    font-size:30px;
+    border-radius: 10px;
+    border: 1px solid #C6C9CB;
+    margin-top:10px;
+    letter-spacing: 0.6px;
+    color: #313131;
+    font-family: 'SF UI DISPLAY Light';
+  }
+  ion-note{
+    margin-bottom: 20px;
+    font-family: 'SF UI DISPLAY Light';
+    color: #57585E;
+  }
+  ion-button.btnInvite{
+    --background: #232323;
+    --padding-start: 4em;
+    --padding-end: 4em;
+    height: 3.5em;
+    margin-bottom: 20px;
+    letter-spacing: 0.6px;
+  }
+
+  .referBox{
+    width: 275px;
+    margin: 0 auto;
+  }

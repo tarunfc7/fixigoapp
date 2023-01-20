@@ -1,0 +1,64 @@
+ion-toolbar {
+    --background: #ffffff;
+    --color: #19422d;
+  
+    /* --border-color: #f24aec; */
+    --border-width: 0px 0 0.55px 0;
+    /* --border-style: double; */
+  
+    /* --min-height: 80px; */
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+  }
+  
+  ion-content{
+    --background: #F6F6F6;
+  }
+  .d-flex{
+    display:flex;
+  }
+  .bdrBtm{
+    border-bottom: 0.55px solid #eee;
+  }
+  
+  .txtSmall{
+    font-size:11px;
+    color: #a6a6a6;
+    text-transform: capitalize;
+  }
+  
+  ion-card.benefitsCard ion-card-content ion-item{
+    --padding-top:10px;
+    --padding-bottom: 10px;
+  }
+  ion-card.membershipCard {
+    margin: 15px 15px 5px;
+    ion-card-content {
+        ion-item{
+            --padding-start:0px;
+            --inner-padding-end:0px;
+            ion-thumbnail{
+                width:95px;                
+            }
+        }
+    }
+}
+  
+  ion-card.membershipCard ion-card-content ion-item ion-label ion-note{
+    font-size: 11px;
+  }
+  ion-card.membershipCard ion-card-content ion-item ion-label p{
+    font-size: 13px;
+  }
+  ion-card.membershipCard ion-card-content ion-item ion-label h4{
+    font-size: 18px;
+  }
+  ion-chip{
+    --background:transparent;
+    font-size:11px;
+    margin:0px;
+  }
+  .txtBlue{    
+    color: #0044FF;
+    font-size:13px;
+  }

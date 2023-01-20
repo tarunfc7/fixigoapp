@@ -1,0 +1,250 @@
+
+ion-toolbar {
+    --background: #ffffff;
+    --color: #19422d;
+  
+    /* --border-color: #f24aec; */
+    --border-width: 0px 0 0.55px 0;
+    /* --border-style: double; */
+  
+    /* --min-height: 80px; */
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+  }
+  .bdrBtm{
+    border-bottom: 0.55px solid #c8c7cc;
+  }
+  .d-flex{
+    display: flex;
+  }
+  ion-label span{
+    font-size:14px;
+    color: #2D2C2C;
+    font-family: 'SF UI DISPLAY Semibold';
+  }
+  ion-item{
+    --padding-start:10px;
+  }
+  ion-grid.confirmlocationGrid {
+    ion-item{
+        --padding-start:10px;
+        --padding-bottom:7px;
+        --padding-top:7px;
+    }
+    ion-label{
+        font-size:14px;
+        color: #2D2C2C;
+        font-family: 'SF UI DISPLAY Light';
+    }
+  }
+  ion-grid.amtGrid{
+    color: #767B80;
+    font-size:13px;
+    margin:15px 15px 0;  
+    ion-col{
+        font-family: 'SF UI DISPLAY Light';
+        margin-bottom: 7px;
+        font-size: 14px;
+    }
+  }
+  .totalAmt{
+    color: #00A61C;  
+    border-bottom: 0.55px solid #efefef;
+    border-top: 0.55px solid #efefef;
+    padding-top:20px;
+    padding-bottom:20px;
+    font-size:16px;
+  }
+  ion-chip{
+    --background:transparent;
+    font-size:11px;
+    margin:0px;
+    ion-icon{
+        margin-right:5px;
+    }
+  }
+  
+  ion-grid.orderStatusGrid {
+    border-bottom: 0.55px solid #efefef;
+  }
+  ion-grid.orderStatusGrid ion-icon {
+    border: 2px solid #707070;
+    padding:10px;
+    border-radius: 50%;
+    margin-bottom: 7px;
+    background:white;
+    font-size: 24px;
+  } 
+  ion-grid.orderStatusGrid ion-thumbnail {
+    display: inline-block;
+    margin: 0px;
+    margin-bottom: 10px;
+    --size: 30px;
+    --border-radius:50%;
+  }
+  ion-grid.orderStatusGrid ion-row.trackRow ion-col {
+    padding: 5px 15px;
+  }
+  ion-grid.orderStatusGrid ion-label {
+    font-size: 12px;
+    display: block;
+  }
+  
+  ion-grid.orderStatusGrid ion-col:after{
+    content: '';
+    position: absolute;
+    width:100%;
+    height: 1px;
+    background: #707070;
+    top: 28px;
+    left: -50%;
+    z-index: -1;
+  }
+  
+  ion-grid.orderStatusGrid ion-col:first-child:after{
+    content: none;
+  }
+  
+  ion-grid.orderStatusGrid ion-col.active + ion-col.active:after{
+    background: #FF1800;
+    height: 2px;
+  }
+  
+  ion-grid.orderStatusGrid ion-col.active ion-icon{
+    color:#FF1800;
+    border:2px solid #FF1800;
+  }
+  ion-grid.orderStatusGrid ion-col.active ion-label{
+    color:#FF1800;
+  }
+
+  ion-grid.carDetailSummary{
+    ion-thumbnail{
+        width:75px;
+        margin:0px;
+    }
+    ion-label{
+        h4{
+            font-size:16px;
+        }
+        p{
+            color: #5C6164;
+            font-family: 'SF UI DISPLAY Light';
+            font-size:12px;
+        }
+    }
+  }
+
+  ion-button.btnTrack{
+    --background: #FF7F00;
+  }
+
+  ion-grid.confirmServiceGrid{
+    ion-item{
+        --padding-start:10px;
+        --padding-bottom:7px;
+        --padding-top:7px;
+        ion-icon{
+            font-size:10px;
+            margin:0px;
+        }
+    }
+  }
+  ion-grid.personalNoteGrid{
+    ion-item{
+        --padding-start:0px;
+        --padding-bottom:7px;
+        --padding-top:7px;
+       ion-label{
+            p{
+                font-size: 13px;
+                color:#303030;
+                font-family: 'SF UI DISPLAY Light';
+                letter-spacing: 0.2px;
+            }
+       }
+    }
+  }
+
+  ion-grid.orderSummaryGrid{ 
+    ion-label{
+        h4{
+        font-size:16px;
+        font-family: 'SF UI DISPLAY Semibold';
+        }
+        p{
+            color: #6E787C;
+            font-family: 'SF UI DISPLAY Light';
+            font-size: 13px;
+            margin-top: 7px;
+            letter-spacing: .6px;
+        }
+    }    
+  }
+  ion-grid.confirmlocationGrid {
+    ion-item{
+        --padding-start:10px;
+        --padding-bottom:7px;
+        --padding-top:7px;
+    }
+    ion-label{
+        font-size:14px;
+        color: #2D2C2C;
+        font-family: 'SF UI DISPLAY Semibold';
+    }
+  }
+  ion-grid.confirmServiceGrid{
+    ion-item{
+        ion-thumbnail{
+            margin:0px;
+            --border-radius: 4px;
+        }
+        ion-label{
+            ion-text{
+                font-size:11px;
+                letter-spacing: .3px;
+                font-family: 'SF UI DISPLAY Light';
+                &.txtProcess{
+                    color:#FF9100;
+                }
+            }
+        }
+    }
+  }
+  .txtPrice{
+    color: #00C90F !important;
+  }
+  ion-grid.serviceAdvisorGrid{
+    ion-item{
+        --padding-start:10px;
+        --padding-bottom:7px;
+        --padding-top:7px;
+    }
+    ion-label{
+        font-size:14px;
+        color: #2D2C2C;
+        font-family: 'SF UI DISPLAY Semibold';
+    }
+    ion-card.advisorCard{
+        --background: #C3FFD5;
+        --color: #149142;
+        margin:10px 0;
+        box-shadow:none;
+        border: 1px solid #40EA84;
+        ion-card-title {
+            --color: #0C6B2F;
+            font-size: 18px;
+            font-family: 'SF UI DISPLAY Semibold';
+            padding: 15px 20px 5px;
+            margin:0px;
+        }
+        ion-card-content{
+            p{
+                font-size:14px;
+                font-family: 'SF UI DISPLAY Light';
+                letter-spacing: 0.6px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+  }

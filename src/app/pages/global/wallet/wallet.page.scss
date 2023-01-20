@@ -1,0 +1,75 @@
+
+ion-toolbar {
+    --background: #ffffff;
+    --color: #19422d;
+  
+    /* --border-color: #f24aec; */
+    --border-width: 0px 0 0.55px 0;
+    /* --border-style: double; */
+  
+    /* --min-height: 80px; */
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+  }
+  
+  ion-content{
+    --background: #ffffff;
+  }
+  .d-flex{
+    display:flex;
+  }
+  .bdrBtm{
+    border-bottom: 0.55px solid #eee;
+  }
+  
+  
+  ion-grid.walletGrid{
+    background: #f6f6f6;
+  }
+  ion-grid.walletGrid ion-label{
+    font-size:14px;
+    padding: 10px 5px;
+  }
+  ion-item::part(detail-icon) {
+    color: white;
+    opacity: 1;
+    font-size: 20px;
+  }
+  ion-card.walletCard{
+    margin:0px;
+    border-radius: 20px;
+  }
+  ion-card.walletCard img{
+    width:90px;
+    margin-top:7px;
+    margin-bottom: 7px;
+  }
+  ion-card.walletCard {
+    ion-label
+    {
+        display: inline-block;
+        width:100%;
+        color: #1F1F1F;
+        font-family: 'SF UI DISPLAY Semibold';
+        font-size:18px;
+        text-align: left;
+    }
+}
+  ion-card.walletCard ion-label.txtValid{
+    display: inline-block;
+    font-size:12px;
+    margin-bottom: 7px;
+  }
+  h3{
+    font-size:24px;
+  }
+  p{
+    font-family: 'SF UI DISPLAY Light';
+    font-size:13px;
+    letter-spacing: 0.6px;
+    color: white;
+  }
+  .bgDanger{
+    --background: #FE1111;
+    --color: white;
+  }

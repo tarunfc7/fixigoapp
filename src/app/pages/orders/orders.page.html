@@ -5,60 +5,65 @@
 </ion-header>
 
 <ion-content>
-  <ion-segment
-  value="default"
-  [(ngModel)]="type"
-  (ionChange)="segmentChanged($event)"
->
+  <!-- <ion-segment  value="default"  [(ngModel)]="type"  (ionChange)="segmentChanged($event)">
   <ion-segment-button value="default">
     <ion-label>Default</ion-label>
   </ion-segment-button>
   <ion-segment-button value="segment">
     <ion-label>Segment</ion-label>
   </ion-segment-button>
-</ion-segment>
+</ion-segment> -->
+
+<ion-grid class="serviceInformation">
+  <ion-row>
+    <ion-col>
+      <ion-segment value="repair" (ionChange)="segmentChanged($event)" [(ngModel)]="type">
+        <ion-segment-button value="repair">
+          <ion-label>Repair & maintenance</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="ondemand">
+          <ion-label>On demand</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-col>   
+  </ion-row>
+</ion-grid>
 
 <ion-item lines="none" class="filterItem">
   <ion-chip slot="end">    
-    <ion-label>Filter</ion-label>
+    <ion-label>Past Orders</ion-label>
     <ion-icon name="filter"></ion-icon>
   </ion-chip>
 </ion-item>
 
-<ion-list *ngIf="type == 'default'">
-  <ion-item lines="none">
+<ion-list *ngIf="type == 'repair'">
+  <ion-item lines="none" (click)="repairdetails()">
     <ion-card class="defaultCard">
       <ion-card-content>
-        <ion-item detail="true" lines="none">
+        <ion-item  lines="none">
           <ion-thumbnail slot="start">
-            <img
-              alt="Silhouette of mountains"
-              src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
-            />
+            <img  alt="Maruthi Suzuki Alto 800"  src="../../../../assets/images/cars/Maruti Suzuki Alto.svg"/>
           </ion-thumbnail>
           <ion-label>
-            <p>ID: 12345</p>
-            <h3>Default Name</h3>
-            <small>Expiry date: 01-01-2030</small>
+            <p>Job card : 545114545</p>
+            <h3>Alto 800 DL X4 XX58</h3>
+            <small>Schedule service</small>
           </ion-label>
         </ion-item>
       </ion-card-content>
     </ion-card>
   </ion-item>
-  <ion-item lines="none">
+  <ion-item lines="none" (click)="repairdetails()">
     <ion-card class="defaultCard">
       <ion-card-content>
-        <ion-item detail="true" lines="none">
+        <ion-item  lines="none">
           <ion-thumbnail slot="start">
-            <img
-              alt="Silhouette of mountains"
-              src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
-            />
+            <img  alt="Maruthi Suzuki Alto 800"  src="../../../../assets/images/cars/Maruti Suzuki Alto.svg"/>
           </ion-thumbnail>
           <ion-label>
-            <p>ID: 12345</p>
-            <h3>Default Name</h3>
-            <small>Expiry date: 01-01-2030</small>
+            <p>Job card : 545114545</p>
+            <h3>Alto 800 DL X4 XX58</h3>
+            <small>Schedule service</small>
           </ion-label>
         </ion-item>
       </ion-card-content>
@@ -66,40 +71,34 @@
   </ion-item>
 </ion-list>
 
-<ion-list *ngIf="type == 'segment'">
-  <ion-item lines="none">
+<ion-list *ngIf="type == 'ondemand'">
+  <ion-item lines="none" (click)="ondemanddetails()">
     <ion-card class="defaultCard">
       <ion-card-content>
-        <ion-item detail="true" lines="none">
+        <ion-item  lines="none">
           <ion-thumbnail slot="start">
-            <img
-              alt="Silhouette of mountains"
-              src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
-            />
+            <img  alt="Maruthi Suzuki Alto 800"  src="../../../../assets/images/cars/Maruti Suzuki Alto.svg"/>
           </ion-thumbnail>
           <ion-label>
-            <p>ID: 12345</p>
-            <h3>Default Name</h3>
-            <small>Expiry date: 01-01-2030</small>
+            <p>Job card : 545114545</p>
+            <h3>Alto 800 DL X4 XX58</h3>
+            <small>Schedule service</small>
           </ion-label>
         </ion-item>
       </ion-card-content>
     </ion-card>
   </ion-item>
-  <ion-item lines="none">
+  <ion-item lines="none" (click)="ondemanddetails()">
     <ion-card class="defaultCard">
       <ion-card-content>
-        <ion-item detail="true" lines="none">
+        <ion-item  lines="none">
           <ion-thumbnail slot="start">
-            <img
-              alt="Silhouette of mountains"
-              src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
-            />
+            <img  alt="Maruthi Suzuki Alto 800"  src="../../../../assets/images/cars/Maruti Suzuki Alto.svg"/>
           </ion-thumbnail>
           <ion-label>
-            <p>ID: 12345</p>
-            <h3>Default Name</h3>
-            <small>Expiry date: 01-01-2030</small>
+            <p>Job card : 545114545</p>
+            <h3>Alto 800 DL X4 XX58</h3>
+            <small>Schedule service</small>
           </ion-label>
         </ion-item>
       </ion-card-content>

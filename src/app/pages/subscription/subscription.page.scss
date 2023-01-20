@@ -39,15 +39,16 @@ ion-card-header.ios {
   }
   
   .gold{
-    background: rgba(160, 143, 47, 0.582);
+    background: #CBA02A;
   }
   .silver{
-    background: silver;
+    background: #86B5C6;
   }
   
   .subscriptionCard p{
     padding:7px 10px;
     color: black;
+    font-family: 'SF UI DISPLAY Light';
   }
 
   ion-toolbar {
