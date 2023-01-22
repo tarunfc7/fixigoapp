@@ -46,7 +46,7 @@ export class OtpPage implements OnInit {
     console.log("OTP working",pin);
     this.formData.pin_error = false;
     if (!!pin) {
-      this.navCtrl.navigateRoot('/select-city');
+      this.navCtrl.navigateRoot('/user-details');
     }; 
   }
 

@@ -14,7 +14,7 @@ export class AccountPage implements OnInit {
   }
 
   public data = [{title:'Notifications',page:'notifications'}, 
-  {title:'Manage your vehicle',page:'tabs'},
+  {title:'Manage your vehicle',page:'vehicles-list'},
    {title:'My Address',page:'address'}, 
    {title:'My Repair Quote',page:'repair-quote'},
    {title:'Wallet', page:'wallet'},
@@ -35,6 +35,10 @@ export class AccountPage implements OnInit {
   page(result:any){
     console.log("result",result);
     this.navCtrl.navigateRoot('/'+result);
+  }
+
+  profile(){
+    this.navCtrl.navigateRoot('/profile');
   }
 
 }

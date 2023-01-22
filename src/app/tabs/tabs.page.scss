@@ -3,3 +3,13 @@ body {
     margin-top: constant(safe-area-inset-top);
     margin-top: env(safe-area-inset-top);
   }
+
+  ion-tab-bar{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    --background: #f8f9fe;
+    --color: #3E3F3F;
+    min-height: 50px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }

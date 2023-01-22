@@ -96,7 +96,7 @@ ion-toolbar {
   }
   
   ion-card.recentBookedCard ion-card-header ion-card-subtitle{
-    font-size:11px;
+    font-size:10px;
     margin: 0px;
     margin-top:7px;
   }
@@ -107,6 +107,7 @@ ion-toolbar {
   ion-card.recentBookedCard ion-card-content ion-item{
     font-size:14px;
     --padding-start: 16px;
+    --background: transparent;
   }
   
   ion-card.recentBookedCard ion-card-content ion-item ion-icon{

@@ -10,11 +10,21 @@ ion-toolbar {
     --padding-top: 10px;
     --padding-bottom: 10px;
   }
+  ion-footer ion-toolbar{
+    --padding-top: 10px;
+    --padding-bottom: 0px;
+  }
+
+  ion-card {
+    border-radius: 20px;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 5%);
+  }
   
   ion-item.serviceInfo {
     --padding-start: 15px;
     --padding-top:15px;
     --padding-bottom:10px;
+    --background : transparent;
   }
   ion-item.serviceDateInfo{
     --padding-start: 15px;
@@ -50,24 +60,27 @@ ion-toolbar {
   
   ion-item.bookServiceItem {
     --padding-start: 15px;
-    --background: rgba(17, 17, 16, 0.74);
+    --background: #332E2F;
     --border-radius: 10px;
     font-size: 13px;
     --padding-end: 0px;
     color: white;
     margin-bottom: 10px;
     --inner-padding-end: 0px;
+    --min-height: 50px;
+    margin: 0 20px;
   }
   
   ion-item.bookServiceItem ion-button {
     margin: 0px;
-    --background: #222222;
+    --background: #231F20;
   }
   
   ion-item.packageInfo{  
     --padding-start: 15px;
     --padding-top:15px;
     --padding-bottom:15px;
+    --background : transparent;
   }
   ion-item.packageInfo ion-label h4{
     font-size:14px;

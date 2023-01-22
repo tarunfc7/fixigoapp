@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="otp"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Enter the details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+ 
+  <h6 class="ion-padding-horizontal">Please enter Your details</h6>
+  <ion-grid class="profileFieldGrid">
+    
+    <ion-row>      
+      <ion-col size="12">
+        <ion-item lines="none" class="themeItem">
+          <ion-label><ion-icon name="person"></ion-icon></ion-label>
+          <ion-input placeholder="Full name"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>      
+      <ion-col size="12">
+        <ion-item lines="none" class="themeItem">
+          <ion-label><ion-icon name="mail"></ion-icon></ion-label>
+          <ion-input placeholder="Email address (optional)"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>      
+      <ion-col size="12">
+        <ion-item lines="none" class="themeItem">
+          <ion-label><ion-icon name="pricetag"></ion-icon></ion-label>
+          <ion-input placeholder="Referral code"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12">
+        <p>Accept the terms and conditions, and privacy policy by tapping on done</p>
+      </ion-col>
+    </ion-row>
+
+    <div class="ion-float-end">
+      <ion-button (click)="selectCity()">Done</ion-button>
+    </div>
+   
+
+  </ion-grid>
+
+  
+</ion-content>

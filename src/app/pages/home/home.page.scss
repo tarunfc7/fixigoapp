@@ -3,13 +3,21 @@
 //     margin-top: constant(safe-area-inset-top);
 //     margin-top: env(safe-area-inset-top);
 //   }
-ion-toolbar {
-    --background: #ffffff;
-    --color: #19422d;  
-    --min-height: 80px;
-    --padding-top: 20px;
-    --padding-bottom: 20px;
-  }
+ion-header ion-toolbar{
+  --min-height:auto;
+  --padding-bottom:0px;
+  --padding-top: 0px;
+  --background: #ffffff;
+  --color: #19422d;
+}
+
+// ion-toolbar {
+//     --background: #ffffff;
+//     --color: #19422d;  
+//     --min-height: 80px;
+//     --padding-top: 20px;
+//     --padding-bottom: 20px;
+//   }
 
   ion-content{
     --background: #f6f6f6;
@@ -75,7 +83,7 @@ ion-card-header.ios {
   .number {
     position: absolute;
     top: 48%;
-    left: 55%;
+    left: 58%;
     transform: translate(-50%, -50%);
   }
   .number h3 {
@@ -120,7 +128,7 @@ ion-card-header.ios {
   ion-item.bookServiceItem {
     --padding-start: 15px !important;
     --background: rgba(255, 255, 0, 0.432);
-    border-radius: 64px;
+    --border-radius: 64px;
     font-size: 13px;
     --inner-padding-end: 0px;
     color: red;
@@ -149,6 +157,11 @@ ion-card-header.ios {
     //   height: 125px;
     //   object-fit: contain;
     // }
+  }
+  ion-card.trendingCard{
+    img{
+      height:80px;
+    }
   }
   ion-slides {
     width: 100%;
@@ -182,9 +195,25 @@ ion-card-header.ios {
   p {
     font-size: 13px;
   }
-  ion-chip{
-    --background: transparent;
-  }
+  ion-grid.cityListGrid {
+    ion-chip{
+      --background: transparent;
+      font-size: 11px;width: 100%;text-align: center;
+      margin: 0px auto;
+      display: inline-block;
+      padding-top: 15px;
+      height:42px;
+      &.active{
+        --background: #00213f;
+        --color: #adefd1;
+        ion-icon{
+          color: white;
+          margin: -4px 2px -4px -4px;
+        }
+      }
+
+    }
+}
 
   
   ion-grid.profile{
@@ -210,7 +239,7 @@ ion-card-header.ios {
     ion-button.btnCity{
       --background: #F1F1F1;
       border: 1px solid #E7E7E8;
-      color: #232323;
+      --color: #232323;
       border-radius: 11px;
     }
 
@@ -245,9 +274,6 @@ ion-card-header.ios {
         }    
       }
     }
-
-    
-   
   }
 
   ion-grid.adsGrid{
@@ -328,8 +354,6 @@ display: flex;
       border-bottom-left-radius: 3px;
   }
   .selectedDefault p:after {
-    /* this creates the "folded" part of our ribbon */
-    
     content: "";
     height: 0;
     width: 0;

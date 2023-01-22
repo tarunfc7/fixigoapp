@@ -26,6 +26,9 @@ ion-item {
   ion-card.serviceInfo{
     border-radius: 20px;
     box-shadow: 0 3px 6px rgb(0 0 0 / 5%);
+    ion-list{
+      background: transparent;
+    }
     ion-thumbnail{
         margin-left: 15px;
         margin-bottom: 10px;

@@ -12,6 +12,10 @@ ion-toolbar{
   --padding-bottom: 20px;
   --border-width: 0;
   }
+  ion-footer ion-toolbar{
+    --padding-top: 10px;
+    --padding-bottom: 0px;
+  }
   ion-content {
     --background: #F6F6F6;
   }
@@ -45,7 +49,7 @@ ion-toolbar{
     font-size:21px;
   }
   ion-item.bookServiceItem {
-    --padding-start: 15px;
+    --padding-start: 20px;
     --background: #332E2F;
     --border-radius: 10px;
     font-size: 14px;
@@ -53,6 +57,8 @@ ion-toolbar{
     color: white;
     margin-bottom: 10px;
     --inner-padding-end: 0px;
+    --min-height: 50px;
+    margin: 0 20px;
   }
   
   ion-item.bookServiceItem ion-button {

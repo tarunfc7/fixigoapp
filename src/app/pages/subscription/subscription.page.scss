@@ -9,6 +9,9 @@ ion-card-header.ios {
     margin:7px 0px;
     padding:0px 0px;  
     border-radius: 21px;
+    ion-thumbnail{
+      width:75px;
+    }
   }
   ion-card {
     --background: #ffffff;
@@ -64,4 +67,5 @@ ion-card-header.ios {
   }
   ion-list{
     background: none;
+    margin-top:15px;
   }

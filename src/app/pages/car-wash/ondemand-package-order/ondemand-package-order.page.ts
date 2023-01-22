@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-ondemand-package-order',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OndemandPackageOrderPage implements OnInit {
 
-  constructor() { }
+  constructor(private navCtrl: NavController,) { }
 
   ngOnInit() {
   }
@@ -18,5 +19,9 @@ export class OndemandPackageOrderPage implements OnInit {
    {title:'Completed',imagePath: '../../../assets/images/car-wash/completed-wash.svg',status: 'pending'} ];
 
  public trackresults = [...this.trackdata];
+
+ home(){
+  this.navCtrl.navigateRoot('/tabs');
+ }
 
 }

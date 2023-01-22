@@ -28,4 +28,8 @@ export class OndemandPackageDetailsPage implements OnInit {
     this.navCtrl.navigateRoot('/ondemand-wash-coupons');
   }
 
+  orderTracking(){
+    this.navCtrl.navigateRoot('/ondemand-order-tracking');
+  }
+
 }

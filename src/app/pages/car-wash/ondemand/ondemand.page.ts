@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { ModalController, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-ondemand',
@@ -8,7 +8,7 @@ import { NavController } from '@ionic/angular';
 })
 export class OndemandPage implements OnInit {
 
-  constructor(private navCtrl: NavController) { }
+  constructor(private navCtrl: NavController,public modal: ModalController) { }
 
   ngOnInit() {
   }
@@ -35,6 +35,7 @@ export class OndemandPage implements OnInit {
   public timeResults = [...this.timeData];
 
   confirmation(){
+    this.modal.dismiss();
     this.navCtrl.navigateRoot('/ondemand-summary');
   }
 

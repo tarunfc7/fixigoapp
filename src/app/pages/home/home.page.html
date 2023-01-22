@@ -1,35 +1,36 @@
-<!-- <ion-header>
+<ion-header>
   <ion-toolbar>
-    <ion-title>home</ion-title>
+    <ion-grid class="ion-no-padding profile">
+      <ion-row class="ion-padding d-flex ion-align-items-center">
+        <ion-col class="ion-no-padding" size="6">
+          <ion-item lines="none" id="item-modal" color="transparent">
+            <ion-avatar slot="start">
+              <img
+                alt="Maruti Suzuki Alto"
+                src="../../../assets/images/cars/Maruti Suzuki Alto.svg"
+              />
+            </ion-avatar>
+            <ion-label
+              >Alto 800
+              <ion-text>Petrol</ion-text>
+            </ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col class="ion-no-padding">
+          <ion-button  id="select-modal" class="ion-float-right btnCity">
+            <ion-icon slot="end" name="caret-down-outline"></ion-icon>
+            Greater Noida
+          </ion-button>        
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-toolbar>
-</ion-header> -->
+</ion-header>
 
 <ion-content>
 
   <ion-grid class="ion-no-padding profile">
-    <ion-row class="ion-padding d-flex ion-align-items-center">
-      <ion-col class="ion-no-padding" size="6">
-        <ion-item lines="none" id="item-modal" color="transparent">
-          <ion-avatar slot="start">
-            <img
-              alt="Maruti Suzuki Alto"
-              src="../../../assets/images/cars/Maruti Suzuki Alto.svg"
-            />
-          </ion-avatar>
-          <ion-label
-            >Alto 800
-            <ion-text>Petrol</ion-text>
-          </ion-label>
-        </ion-item>
-      </ion-col>
-      <ion-col class="ion-no-padding">
-        <ion-button  id="select-modal" class="ion-float-right btnCity">
-          <ion-icon slot="end" name="caret-down-outline"></ion-icon>
-          Greater Noida
-        </ion-button>        
-      </ion-col>
-    </ion-row>
-
+   
     <ion-card class="vehicleCard">    
       <ion-card-content>
         <ion-grid [fixed]="true" class="ion-no-padding">
@@ -130,12 +131,13 @@
       </ion-slide>
     </ion-slides>
   </ion-grid>
+  
 
   <ion-grid class="adsGrid ion-padding">
     <ion-row class="ion-no-padding">
       <ion-col size="12" class="ion-no-padding">
-        <ion-thumbnail>
-          <img alt="ads" src="../../../assets/images/coupons/Group 1313.png" />
+        <ion-thumbnail (click)="viewService()">
+          <img alt="insurance Claim" src="../../../assets/images/coupons/Group 1313.png" />
         </ion-thumbnail>
       </ion-col>
     </ion-row>
@@ -557,36 +559,19 @@
     <ng-template>
       <ion-content class="ion-padding">
         <div class="ion-margin-top">
-          <ion-label class="ion-padding-horizontal">Item Modal.</ion-label>
-          <ion-grid>
+          <ion-label class="ion-padding-horizontal">Select your city</ion-label>
+          <ion-grid class="cityListGrid">
             <ion-row>
-              <ion-col size="4"
-                ><ion-chip [outline]="true">Outline</ion-chip></ion-col
-              >
-              <ion-col size="4"
-                ><ion-chip [outline]="true">Outline</ion-chip></ion-col
-              >
-              <ion-col size="4"
-                ><ion-chip [outline]="true">Outline</ion-chip></ion-col
-              >
-              <ion-col size="4"
-                ><ion-chip [outline]="true">Outline</ion-chip></ion-col
-              >
-              <ion-col size="4"
-                ><ion-chip [outline]="true">Outline</ion-chip></ion-col
-              >
-              <ion-col size="4"
-                ><ion-chip [outline]="true">Outline</ion-chip></ion-col
-              >
-              <ion-col size="4"
-                ><ion-chip [outline]="true">Outline</ion-chip></ion-col
-              >
-              <ion-col size="4"
-                ><ion-chip [outline]="true">Outline</ion-chip></ion-col
-              >
-              <ion-col size="4"
-                ><ion-chip [outline]="true">Outline</ion-chip></ion-col
-              >
+              <ion-col size="4"><ion-chip class="active"><ion-icon name="checkmark-circle"></ion-icon> Delhi</ion-chip></ion-col>
+              <ion-col size="4"><ion-chip [outline]="true">Noida</ion-chip></ion-col>
+              <ion-col size="4"><ion-chip [outline]="true">Greater Noida</ion-chip></ion-col>
+              <ion-col size="4"><ion-chip [outline]="true">Ghaziabad</ion-chip></ion-col>
+              <ion-col size="4"><ion-chip [outline]="true">Gurugram</ion-chip></ion-col>
+              <ion-col size="4"><ion-chip [outline]="true">Chandigarh</ion-chip></ion-col >
+              <ion-col size="4"><ion-chip [outline]="true">Mohali</ion-chip></ion-col>
+              <ion-col size="4"><ion-chip [outline]="true">Panchkula</ion-chip></ion-col>
+              <ion-col size="4"><ion-chip [outline]="true">Ambala</ion-chip></ion-col>
+              <ion-col size="4"><ion-chip [outline]="true">Ludhiana</ion-chip></ion-col>
             </ion-row>
           </ion-grid>
           <ion-button

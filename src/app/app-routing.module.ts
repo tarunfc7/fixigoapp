@@ -160,6 +160,14 @@ const routes: Routes = [
   {
     path: 'faq',
     loadChildren: () => import('./pages/global/faq/faq.module').then( m => m.FaqPageModule)
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('./pages/global/profile/profile.module').then( m => m.ProfilePageModule)
+  },
+  {
+    path: 'user-details',
+    loadChildren: () => import('./pages/global/user-details/user-details.module').then( m => m.UserDetailsPageModule)
   }
 
 ];
